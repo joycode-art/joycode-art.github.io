@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <title>Clean C&#43;&#43;: 应用「准关键字」定义抽象接口</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="this is meta description">
+  <meta name="author" content="JoyCode Inc.">
+  <meta name="generator" content="Hugo 0.81.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/bootstrap/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/themify-icons/themify-icons.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/slick/slick.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/slick/slick-theme.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/aos/aos.css">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/scss/style.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://joycode-art.github.io/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="https://joycode-art.github.io/images/favicon.png" type="image/x-icon">
+
+  
+  <meta property="og:image" content="https://joycode-art.github.io/images/blogs/02.jpg" />
+  
+  <meta property="og:title" content="Clean C&#43;&#43;: 应用「准关键字」定义抽象接口" />
+<meta property="og:description" content="this is meta description" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joycode-art.github.io/blog/post-2/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2020-03-14T15:40:24&#43;06:00" />
+<meta property="article:modified_time" content="2020-03-14T15:40:24&#43;06:00" />
+
+
+  
+
+</head><body id="top" data-spy="scroll" data-target="#navbar-spy" class="position-relative">
+<!-- preloader start -->
+<div class="preloader position-fixed d-flex align-items-center justify-content-center">
+  <div class="block">
+    <div class="loader-image mb-20">
+      <img src="images/favicon.png" alt="">
+    </div>
+    <h2 class="loader-text text-uppercase">
+      <span class="h3 font-weight-light mb-1">Welcome to</span>
+      <span class="font-weight-bold">JoyCode</span>
+    </h2>
+  </div> 
+</div>
+<!-- preloader end -->
+<header class="header-nav position-relative">
+    <div class="container">
+      <nav class="navbar navbar-expand-xl navbar-light px-0">
+        <a class="navbar-brand p-0" href="https://joycode-art.github.io">
+          
+          <img class="img-fluid" src="https://joycode-art.github.io/images/favicon.png" alt="JoyCode: A Hardcore Software Consultancy | JoyCode">
+          
+        </a>
+
+        <button class="navbar-toggler bg-white rounded-0 p-0" type="button" data-toggle="collapse"
+          data-target="#navlinks" aria-controls="navlinks" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="nav-toggle-icon" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+            <path class="line top"
+              d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+            <path class="line middle" d="m 70,50 h -40" />
+            <path class="line bottom"
+              d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" /></svg>
+        </button>
+        
+
+        <div class="collapse navbar-collapse" id="navlinks">
+          <ul class="navbar-nav mx-auto">
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/">主页</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/service">解决方案</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/service">客户案例</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/blog">技术洞见</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/team">关于我们</a>
+            </li>
+            
+            
+            <li class="nav-link">
+              
+              
+              <select class="border-0" id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="en" value="https://joycode-art.github.io/en/blog/post-2/">English</option>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="zh" value="https://joycode-art.github.io/blog/post-2/" selected>简体中文
+                </option>
+                
+                
+                
+                
+              </select>
+              
+            </li>
+          </ul>
+
+          <div class="navbar-button">
+            <button href="#!" class="btn btn-sm btn-outline-primary" data-toggle="modal"
+              data-target="#signup-modal">Sign
+              Up</button>
+            <button href="#!" class="btn btn-sm btn-link pr-xl-0" data-toggle="modal" data-target="#signin-modal">Log
+              in<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-right-short"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+              </svg></button>
+          </div>
+        </div>
+        
+      </nav>
+    </div>
+  </header>
+
+  
+  <section class="section-padding pt-50">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-lg-9 col-md-12 mb-60" data-aos="fade-in" data-aos-delay="50">
+          <div class="post-category position-relative mb-15"><a
+            href="/categories/science" class="text-black-200 font-weight-600 ml-1">Science </a>
+            
+          </div>
+
+          <h2 class="font-weight-bold mb-30">Clean C&#43;&#43;: 应用「准关键字」定义抽象接口</h2>
+
+          <div class="post-meta font-weight-600 text-primary mb-15">
+            <a target="_blank" class="text-primary" href="https://linkedin.com/in/#">刘光聪</a>
+            <span class="mx-2">|</span>
+            <span>14 Mar, 2020</span>
+            <span class="mx-2">|</span>
+            <span>2 Mins Read</span>
+          </div>
+          <div class="content"><blockquote>
+<p>There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies. &ndash; C.A.R. Hoare</p>
+</blockquote>
+<h3 id="抽象接口">抽象接口</h3>
+<p>使用<code>C++</code>定义纯粹的抽象接口类型，与定义普通的类并无区别，只是在形态上具有特殊的表现形式: 它拥有一个公开的、空实现的、虚拟的析构函数。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Rule</span> {
+  <span style="color:#66d9ef">virtual</span> std<span style="color:#f92672">::</span>string apply(<span style="color:#66d9ef">int</span> n) <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">virtual</span> <span style="color:#f92672">~</span>Rule() {}
+}
+</code></pre></div><p>不幸的是，每当定义一个接口类型时，都要小心翼翼地定义虚拟析构函数，这不仅仅是重复设计的问题；更有甚者，这样的惯用法必然存在安全的隐患，万一存在一个程序员在喝酒之后定义给你一个抽象接口呢？与其让程序员存在犯罪的风险，不如预防错误发生。既然程序员容易遗忘，那么就自动「生成代码」，这样便可高枕无忧了。</p>
+<blockquote>
+<p>预防优于治疗，将错误扼杀在源头。</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">namespace</span> cub {
+
+<span style="color:#66d9ef">namespace</span> details {
+<span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Interface</span> {
+  <span style="color:#66d9ef">virtual</span> <span style="color:#f92672">~</span>Interface() {
+  }
+};
+}  <span style="color:#75715e">// namespace details
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#define INTERFACE(type) \
+</span><span style="color:#75715e">struct type : ::cub::details::Interface&lt;type&gt;
+</span><span style="color:#75715e"></span>
+} <span style="color:#75715e">// namespace cub
+</span></code></pre></div><p>有了<code>INTERFACE</code>的宏定义，定义抽象的接口类型，可谓易如反掌。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">INTERFACE(Rule) {
+  <span style="color:#66d9ef">virtual</span> std<span style="color:#f92672">::</span>string apply(<span style="color:#66d9ef">int</span> n) <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+};
+</code></pre></div><h3 id="扩展接口">扩展接口</h3>
+<p>但是，应用<code>INTERFACE</code>定义多重继承的接口类型时，将面临困境。因此，需要定义另外的两个「准关键字」，<code>Java</code>程序员对这两个关键字早已司空见惯了。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#define EXTENDS(...) , ##__VA_ARGS__
+</span><span style="color:#75715e">#define IMPLEMENTS(...) EXTENDS(__VA_ARGS__)
+</span></code></pre></div><p>例如，接口<code>Matcher</code>扩展另外一个抽象接口<code>SelfDescribing</code>，则可以使用<code>EXTENDS</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Description</span>;
+
+INTERFACE(SelfDescribing) {
+  <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">decribeTo</span>(Description<span style="color:#f92672">&amp;</span>) <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+};
+
+INTERFACE(Matcher) EXTENDS(SelfDescribing) {
+  <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">matches</span>() <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+};
+</code></pre></div><h3 id="抽象方法">抽象方法</h3>
+<p>程序员定义纯虚函数时，特别容易遗忘尾部的<code>= 0</code>的后缀。纯虚函数声明的是抽象方法，而虚函数不能够准确表达这个语义的。同理，应用「代码生成」的机制，杜绝错误发生的可能性。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#define ABSTRACT(...) virtual __VA_ARGS__ = 0
+</span></code></pre></div><p>使用<code>ABSTRACT</code>可以增强代码的可读性，向用户声明这是一个抽象方法，而不是纯虚函数。而且，<code>ABSTRACT</code>置于行首，而非纯虚函数首尾声明<code>virtual ... = 0</code>，相对更不容易犯错。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">INTERFACE(Rule) {
+  ABSTRACT(std<span style="color:#f92672">::</span>string apply(<span style="color:#66d9ef">int</span> n) <span style="color:#66d9ef">const</span>);
+};
+</code></pre></div><h3 id="覆写方法">覆写方法</h3>
+<p>当子类覆写虚函数时，可以使用<code>override</code>增强编译时的安全性，及其改善代码的可读性。但是，<code>C++11</code>标准的<code>override</code>需要标注到函数签名的尾部，往往也被程序员遗忘。事实上，遗忘<code>override</code>并非什么大错，但会失去编译时安全的保护。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#define OVERRIDE(...) __VA_ARGS__ override
+</span></code></pre></div><p>定义<code>OVRIRIDE</code>的准关键字，将其重要性置于行首，增强其重要性。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Atom</span> <span style="color:#f92672">:</span> Rule {
+  Atom(Matcher<span style="color:#f92672">*</span> matcher, Action<span style="color:#f92672">*</span> action);
+  
+<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+  OVERRIDE(std<span style="color:#f92672">::</span>string apply(<span style="color:#66d9ef">int</span> n) <span style="color:#66d9ef">const</span>);
+  
+<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+  Matcher<span style="color:#f92672">*</span> matcher;
+  Action<span style="color:#f92672">*</span>  action;  
+};
+</code></pre></div><h3 id="其他关键字">其他关键字</h3>
+<p>那么是不是应该都将<code>C++</code>的其他关键字都定义为宏呢？例如<code>const, constexpr, static</code>。回答当然是&quot;No&quot;，我们只会定义程序员容易出错的关键场景，例如，定义抽象接口时遗漏虚拟析构函数，定义纯虚函数时遗漏行末的<code>= 0</code>，子类覆写虚函数时遗漏<code>override</code>。</p>
+<p>也许你会对使用宏而心有余悸，其实完全没必要担心。当你习惯了这套「准关键字」，你想犯错都难；而使用原生C++的关键字，我肯定你会犯错。</p>
+<h3 id="增强的抽象接口">增强的抽象接口</h3>
+<p>上文定义的<code>cub::details::Interface</code>类，它只定义了虚拟析构函数。遗憾的是，在新的<code>C++11</code>标准里，这将阻止<code>Interface</code>自动生成移动构造函数，及其移动赋值运算符；而且，自动生成的拷贝构造函数，及其拷贝赋值运算符的规则也被标准废弃，在未来的实现中可能被抛弃。</p>
+<p>那么，使用<code>INTERFACE</code>定义的抽象接口，其实现该接口的所有子类将不可移动，只能做保守的拷贝操作。这样的拷贝行为，甚至被标准实现所废弃。</p>
+<p>因此在<code>C++11</code>的实现中，<code>Interface</code>的基类需要进行稍许的改进，使用<code>default</code>显式声明所有需要自动生成的函数。注意，析构函数声明为<code>public, virtual</code>的，其他声明为<code>protected</code>即可。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Interface</span> {
+  <span style="color:#66d9ef">virtual</span> <span style="color:#f92672">~</span>Interface() <span style="color:#f92672">=</span> <span style="color:#66d9ef">default</span>;
+  
+<span style="color:#66d9ef">protected</span><span style="color:#f92672">:</span>
+  Interface() <span style="color:#f92672">=</span> <span style="color:#66d9ef">default</span>;
+
+  Interface(Interface<span style="color:#f92672">&amp;&amp;</span>) <span style="color:#66d9ef">noexcept</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">default</span>;
+  Interface<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">=</span>(Interface<span style="color:#f92672">&amp;&amp;</span>) <span style="color:#66d9ef">noexcept</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">default</span>;
+
+  Interface(<span style="color:#66d9ef">const</span> Interface<span style="color:#f92672">&amp;</span>) <span style="color:#f92672">=</span> <span style="color:#66d9ef">default</span>;
+  Interface<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">=</span>(<span style="color:#66d9ef">const</span> Interface<span style="color:#f92672">&amp;</span>) <span style="color:#f92672">=</span> <span style="color:#66d9ef">default</span>; 
+};
+</code></pre></div></div>
+        </div>
+          
+        
+      </div>
+    </div>
+  </section>
+  
+
+  
+  <section class="pb-50">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-6 col-md-9 text-center mb-40">
+          <h2 class="section-title">Recent Articles</h2>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="col-lg-4 col-md-6 mb-40">
+          <div class="card border-0 h-100">
+            <a class="d-flex flex-fill align-items-center" href="https://joycode-art.github.io/blog/post-2/"><img class="card-img-top rounded" src="https://joycode-art.github.io/images/blogs/02.jpg" alt="blog-image"></a>
+            <div class="p-25 pb-0">
+              <div class="post-category position-relative mb-15"><a
+                href="/categories/science" class="text-black-200 font-weight-600 ml-1">Science </a>
+                
+              </div>
+              <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/blog/post-2/">Clean C&#43;&#43;: 应用「准关键字」定义抽象接口</a>
+              <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>2 Mins Read
+              </div>
+              <p>There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-40">
+          <div class="card border-0 h-100">
+            <a class="d-flex flex-fill align-items-center" href="https://joycode-art.github.io/blog/post-5/"><img class="card-img-top rounded" src="https://joycode-art.github.io/images/blogs/05.jpg" alt="blog-image"></a>
+            <div class="p-25 pb-0">
+              <div class="post-category position-relative mb-15"><a
+                href="/categories/technology" class="text-black-200 font-weight-600 ml-1">Technology </a>
+                
+              </div>
+              <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/blog/post-5/">实现模式</a>
+              <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>2 Mins Read
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-40">
+          <div class="card border-0 h-100">
+            <a class="d-flex flex-fill align-items-center" href="https://joycode-art.github.io/blog/post-6/"><img class="card-img-top rounded" src="https://joycode-art.github.io/images/blogs/06.jpg" alt="blog-image"></a>
+            <div class="p-25 pb-0">
+              <div class="post-category position-relative mb-15"><a
+                href="/categories/science" class="text-black-200 font-weight-600 ml-1">Science </a>
+                
+              </div>
+              <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/blog/post-6/">开发者测试</a>
+              <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>2 Mins Read
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+
+
+<footer class="bg-light-gray has-shapes has-bg-brash bg-brash-top "
+  style="background-image: url('https://joycode-art.github.io/images/brushes/footer.svg')">
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="block border-top text-center content">Designed By <a href="https://joycode.art/">JoyCode</a></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shape-1 shape-xs bg-orange rounded-circle"></div>
+  <div class="shape-2 shape-sm-2 bg-cyan rounded-circle"></div>
+  <div class="shape-3 shape-sm bg-yellow rounded-circle"></div>
+  <div class="shape-4 shape-xs-2 bg-cyan rounded-circle"></div>
+  <div class="shape-5 shape-sm-2 bg-yellow rounded-circle"></div>
+  <div class="shape-6 shape-sm-2 bg-orange rounded-circle"></div>
+</footer>
+
+
+
+<a href="#top" class="btn btn-primary scroll-to-top-btn smooth-scroll position-fixed"><svg
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+    <path id="Layer" fill="currentColor"
+      d="M7.2 19.2L15.2 11.2C15.68 10.71 16.43 10.68 16.96 11.08L17.08 11.2L25.08 19.2L23.2 21.08L16.14 14.02L9.08 21.08L7.2 19.2Z" />
+    </svg></a>
+
+
+<!-- JS Plugins -->
+
+<script src="https://joycode-art.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/shuffle/shuffle.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/aos/aos.js"></script>
+
+
+<!-- Main Script -->
+
+<script src="https://joycode-art.github.io/js/script.min.js"></script></body>
+
+</html>

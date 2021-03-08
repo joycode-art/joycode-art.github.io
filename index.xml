@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JoyCode: A Hardcore Software Consultancy | JoyCode</title>
+    <link>https://joycode-art.github.io/</link>
+    <description>Recent content on JoyCode: A Hardcore Software Consultancy | JoyCode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Designed By [JoyCode](https://joycode.art/)</copyright>
+    <lastBuildDate>Sat, 14 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="https://joycode-art.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clean C&#43;&#43;: 应用「准关键字」定义抽象接口</title>
+      <link>https://joycode-art.github.io/blog/post-2/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://joycode-art.github.io/blog/post-2/</guid>
+      <description>There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies.</description>
+    </item>
+    
+    <item>
+      <title>实现模式</title>
+      <link>https://joycode-art.github.io/blog/post-5/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://joycode-art.github.io/blog/post-5/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</description>
+    </item>
+    
+    <item>
+      <title>开发者测试</title>
+      <link>https://joycode-art.github.io/blog/post-6/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://joycode-art.github.io/blog/post-6/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</description>
+    </item>
+    
+    <item>
+      <title>开发者测试: 实现BDD测试框架(JSpec)</title>
+      <link>https://joycode-art.github.io/blog/post-1/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://joycode-art.github.io/blog/post-1/</guid>
+      <description>There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies.</description>
+    </item>
+    
+    <item>
+      <title>测试驱动开发</title>
+      <link>https://joycode-art.github.io/blog/post-4/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://joycode-art.github.io/blog/post-4/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</description>
+    </item>
+    
+    <item>
+      <title>重构</title>
+      <link>https://joycode-art.github.io/blog/post-3/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://joycode-art.github.io/blog/post-3/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</description>
+    </item>
+    
+    <item>
+      <title>Full-Stack Designer</title>
+      <link>https://joycode-art.github.io/career/job-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/career/job-4/</guid>
+      <description>About Copper At Copper, we want to make your neighborhood a little more familiar.</description>
+    </item>
+    
+    <item>
+      <title>Full-Stack Engineer</title>
+      <link>https://joycode-art.github.io/career/job-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/career/job-6/</guid>
+      <description>About Copper At Copper, we want to make your neighborhood a little more familiar.</description>
+    </item>
+    
+    <item>
+      <title>Head Design</title>
+      <link>https://joycode-art.github.io/career/job-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/career/job-2/</guid>
+      <description>About Copper At Copper, we want to make your neighborhood a little more familiar.</description>
+    </item>
+    
+    <item>
+      <title>Java Developer</title>
+      <link>https://joycode-art.github.io/career/job-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/career/job-3/</guid>
+      <description>About Copper At Copper, we want to make your neighborhood a little more familiar.</description>
+    </item>
+    
+    <item>
+      <title>Laravel Developer</title>
+      <link>https://joycode-art.github.io/career/job-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/career/job-1/</guid>
+      <description>About Copper At Copper, we want to make your neighborhood a little more familiar.</description>
+    </item>
+    
+    <item>
+      <title>Lead Product Designer</title>
+      <link>https://joycode-art.github.io/career/job-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/career/job-5/</guid>
+      <description>About Copper At Copper, we want to make your neighborhood a little more familiar.</description>
+    </item>
+    
+  </channel>
+</rss>

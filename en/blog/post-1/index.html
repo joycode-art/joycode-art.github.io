@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Programming DSL: Implements JSpec</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="this is meta description">
+  <meta name="author" content="JoyCode Inc.">
+  <meta name="generator" content="Hugo 0.81.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/bootstrap/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/themify-icons/themify-icons.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/slick/slick.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/slick/slick-theme.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/aos/aos.css">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/scss/style.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://joycode-art.github.io/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="https://joycode-art.github.io/images/favicon.png" type="image/x-icon">
+
+  
+  <meta property="og:image" content="https://joycode-art.github.io/images/blogs/01.jpg" />
+  
+  <meta property="og:title" content="Programming DSL: Implements JSpec" />
+<meta property="og:description" content="this is meta description" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joycode-art.github.io/en/blog/post-1/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2020-03-14T15:40:24&#43;06:00" />
+<meta property="article:modified_time" content="2020-03-14T15:40:24&#43;06:00" />
+
+
+  
+
+</head><body id="top" data-spy="scroll" data-target="#navbar-spy" class="position-relative">
+<!-- preloader start -->
+<div class="preloader position-fixed d-flex align-items-center justify-content-center">
+  <div class="block">
+    <div class="loader-image mb-20">
+      <img src="images/favicon.png" alt="">
+    </div>
+    <h2 class="loader-text text-uppercase">
+      <span class="h3 font-weight-light mb-1">Welcome to</span>
+      <span class="font-weight-bold">JoyCode</span>
+    </h2>
+  </div> 
+</div>
+<!-- preloader end -->
+<header class="header-nav position-relative">
+    <div class="container">
+      <nav class="navbar navbar-expand-xl navbar-light px-0">
+        <a class="navbar-brand p-0" href="https://joycode-art.github.io">
+          
+          <img class="img-fluid" src="https://joycode-art.github.io/images/favicon.png" alt="JoyCode: A Hardcore Software Consultancy | JoyCode">
+          
+        </a>
+
+        <button class="navbar-toggler bg-white rounded-0 p-0" type="button" data-toggle="collapse"
+          data-target="#navlinks" aria-controls="navlinks" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="nav-toggle-icon" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+            <path class="line top"
+              d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+            <path class="line middle" d="m 70,50 h -40" />
+            <path class="line bottom"
+              d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" /></svg>
+        </button>
+        
+
+        <div class="collapse navbar-collapse" id="navlinks">
+          <ul class="navbar-nav mx-auto">
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/">Home</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/service">Solutions</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/service">Stories</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/blog">Insights</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/team">Team</a>
+            </li>
+            
+            
+            <li class="nav-link">
+              
+              
+              <select class="border-0" id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="en" value="https://joycode-art.github.io/en/blog/post-1/" selected>English
+                </option>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="zh" value="https://joycode-art.github.io/blog/post-1/">简体中文</option>
+                
+                
+                
+                
+              </select>
+              
+            </li>
+          </ul>
+
+          <div class="navbar-button">
+            <button href="#!" class="btn btn-sm btn-outline-primary" data-toggle="modal"
+              data-target="#signup-modal">Sign
+              Up</button>
+            <button href="#!" class="btn btn-sm btn-link pr-xl-0" data-toggle="modal" data-target="#signin-modal">Log
+              in<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-right-short"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+              </svg></button>
+          </div>
+        </div>
+        
+      </nav>
+    </div>
+  </header>
+
+  
+  <section class="section-padding pt-50">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-lg-9 col-md-12 mb-60" data-aos="fade-in" data-aos-delay="50">
+          <div class="post-category position-relative mb-15"><a
+            href="/en/categories/technology" class="text-black-200 font-weight-600 ml-1">Technology </a>
+            
+          </div>
+
+          <h2 class="font-weight-bold mb-30">Programming DSL: Implements JSpec</h2>
+
+          <div class="post-meta font-weight-600 text-primary mb-15">
+            <a target="_blank" class="text-primary" href="https://linkedin.com/in/#">Ausie Makquis</a>
+            <span class="mx-2">|</span>
+            <span>14 Mar, 2020</span>
+            <span class="mx-2">|</span>
+            <span>4 Mins Read</span>
+          </div>
+          <div class="content"><blockquote>
+<p>There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies. &ndash; C.A.R. Hoare</p>
+</blockquote>
+<p>本文通过「<code>JSpec</code>」的设计和实现的过程，加深认识「内部<code>DSL</code>」设计的基本思路。<code>JSpec</code>是一个使用<code>Java8</code>实现的「<code>BDD</code>」测试框架。</p>
+<h2 id="动机">动机</h2>
+<p>在<code>Java</code>社区中，<code>JUnit</code>是一个广泛被使用的测试框架。不幸的是，<code>JUnit</code>的测试用例必须遵循严格的「标识符」命名规则，给程序员带来了很大的不便。</p>
+<h3 id="命名模式">命名模式</h3>
+<p><code>Junit</code>为了做到「自动发现」机制，在运行时完成用例的组织，规定所有的测试用例必须遵循<code>public void testXXX()</code>的函数原型。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testTrue</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  Assert<span style="color:#f92672">.</span><span style="color:#a6e22e">assertTrue</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="注解">注解</h3>
+<p>自<code>Java 1.5</code>支持「注解」之后，社区逐步意识到了「注解优于命名模式」的最佳实践，<code>JUnit</code>使用<code>@Test</code>注解，增强了用例的表现力。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Test</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">alwaysTrue</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  Assert<span style="color:#f92672">.</span><span style="color:#a6e22e">assertTrue</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="given-when-then"><code>Given-When-Then</code></h3>
+<p>经过实践证明，基于场景验收的<code>Given-When-Then</code>命名风格具有强大的表现力。但<code>JUnit</code>遵循严格的标示符命名规则，程序员需要承受巨大的痛苦。</p>
+<p>这种混杂「驼峰」和「下划线」的命名风格，虽然在社区中得到了广泛的应用，但在重命名时，变得非常不方便。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GivenAStack</span> <span style="color:#f92672">{</span>
+  <span style="color:#a6e22e">@Test</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">should_be_empty_when_created</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> 
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#a6e22e">@Test</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">should_pop_the_last_element_pushed_onto_the_stack</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> 
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="新贵">新贵</h3>
+<p>以<code>RSpec, Cucumber, Jasmine</code>等为代表的<code>[BDD」(Behavior-Driven Development)</code>测试框架以强大的表现力，迅速得到了社区的广泛应用。其中，<code>RSpec, Jasmine</code>就是我较为喜爱的测试框架。例如，<code>Jasmine</code>的<code>JavaScript</code>测试用例是这样的。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;A suite&#34;</span>, <span style="color:#66d9ef">function</span>() {
+  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;contains spec with an expectation&#34;</span>, <span style="color:#66d9ef">function</span>() {
+    <span style="color:#a6e22e">expect</span>(<span style="color:#66d9ef">true</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">true</span>);
+  });
+});
+</code></pre></div><h2 id="jspec">JSpec</h2>
+<p>我们将尝试设计和实现一个<code>Java</code>版的<code>BDD</code>测试框架：<strong><code>JSpec</code></strong>。它的风格与<code>Jasmine</code>基本类似，并与<code>Junit4</code>配合得完美无瑕。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>JSpec<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JSpecs</span> <span style="color:#f92672">{{</span>
+  describe<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;A spec&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> items <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+
+    before<span style="color:#f92672">(()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+      items<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;foo&#34;</span><span style="color:#f92672">);</span>
+      items<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bar&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">});</span>
+
+    after<span style="color:#f92672">(()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+      items<span style="color:#f92672">.</span><span style="color:#a6e22e">clear</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">});</span>
+
+    it<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;runs the before() blocks&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+      assertThat<span style="color:#f92672">(</span>items<span style="color:#f92672">,</span> contains<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;foo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;bar&#34;</span><span style="color:#f92672">));</span>
+    <span style="color:#f92672">});</span>
+
+    describe<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;when nested&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+      before<span style="color:#f92672">(()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+        items<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;baz&#34;</span><span style="color:#f92672">);</span>
+      <span style="color:#f92672">});</span>
+
+      it<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;runs before and after from inner and outer scopes&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+        assertThat<span style="color:#f92672">(</span>items<span style="color:#f92672">,</span> contains<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;foo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;bar&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;baz&#34;</span><span style="color:#f92672">));</span>
+      <span style="color:#f92672">});</span>
+    <span style="color:#f92672">});</span>
+  <span style="color:#f92672">});</span>
+<span style="color:#f92672">}}</span>
+</code></pre></div><h3 id="初始化块">初始化块</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JSpecs</span> <span style="color:#f92672">{{</span>
+  <span style="color:#f92672">......</span>
+<span style="color:#f92672">}}</span>
+</code></pre></div><p>嵌套两层<code>{}</code>，这是<code>Java</code>的一种特殊的初始化方法，常称为<code>初始化块</code>。其行为与如下代码类同，但它更加简洁、漂亮。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JSpecs</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">JSpecs</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#f92672">......</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="代码块">代码块</h3>
+<p><code>describe, it, before, after</code>都存在一个<code>() -&gt; {...}</code>代码块，以便实现行为的定制化，为此先抽象一个<code>Block</code>的概念。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@FunctionalInterface</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Block</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">apply</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> Throwable<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="雏形">雏形</h3>
+<p>定义如下几个函数，明确<code>JSpec DSL</code>的基本雏形。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JSpec</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">describe</span><span style="color:#f92672">(</span>String desc<span style="color:#f92672">,</span> Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#f92672">......</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">it</span><span style="color:#f92672">(</span>String behavior<span style="color:#f92672">,</span> Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#f92672">......</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">before</span><span style="color:#f92672">(</span>Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#f92672">......</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">after</span><span style="color:#f92672">(</span>Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#f92672">......</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><h3 id="上下文">上下文</h3>
+<p><code>describe</code>可以嵌套<code>describe, it, before, after</code>的代码块，并且外层的<code>describe</code>给内嵌的代码块建立了「上下文」环境。</p>
+<p>例如，<code>items</code>在最外层的<code>describe</code>中定义，它对<code>describe</code>整个内部都可见。</p>
+<h4 id="隐式树">隐式树</h4>
+<p><code>describe</code>可以嵌套<code>describe</code>，并且<code>describe</code>为内部的结构建立「上下文」，因此<code>describe</code>之间建立了一棵「隐式树」。</p>
+<h4 id="领域模型">领域模型</h4>
+<p>为此，抽象出了<code>Context</code>的概念，用于描述<code>describe</code>的运行时。也就是是，<code>Context</code>描述了<code>describe</code>内部可见的几个重要实体：</p>
+<ul>
+<li><code>List&lt;Block&gt; befores：before</code>代码块集合</li>
+<li><code>List&lt;Block&gt; afters：after</code>代码块集合</li>
+<li><code>Description desc：</code>包含了父子之间的层次关系等上下文描述信息</li>
+<li><code>Deque&lt;Executor&gt; executors：</code>执行器的集合。</li>
+</ul>
+<p><code>Executor</code>在后文介绍，可以将<code>Executor</code>理解为<code>Context</code>及其<code>Spec</code>的运行时行为；其中，<code>Context</code>对于于<code>desribe</code>子句，<code>Spec</code>对于于<code>it</code>子句。</p>
+<p>因为<code>describe</code>之间存在「隐式树」的关系，<code>Context</code>及<code>Spec</code>之间也就形成了「隐式树」的关系。</p>
+<h4 id="参考实现">参考实现</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Context</span> <span style="color:#f92672">{</span>
+
+  <span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span>Block<span style="color:#f92672">&gt;</span> befores <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+  <span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span>Block<span style="color:#f92672">&gt;</span> afters <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+
+  <span style="color:#66d9ef">private</span> Deque<span style="color:#f92672">&lt;</span>Executor<span style="color:#f92672">&gt;</span> executors <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayDeque<span style="color:#f92672">&lt;&gt;();</span>
+  <span style="color:#66d9ef">private</span> Description desc<span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Context</span><span style="color:#f92672">(</span>Description desc<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">desc</span> <span style="color:#f92672">=</span> desc<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addChild</span><span style="color:#f92672">(</span>Context child<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    desc<span style="color:#f92672">.</span><span style="color:#a6e22e">addChild</span><span style="color:#f92672">(</span>child<span style="color:#f92672">.</span><span style="color:#a6e22e">desc</span><span style="color:#f92672">);</span>
+    executors<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>child<span style="color:#f92672">);</span>
+    
+    child<span style="color:#f92672">.</span><span style="color:#a6e22e">addBefore</span><span style="color:#f92672">(</span>collect<span style="color:#f92672">(</span>befores<span style="color:#f92672">));</span>
+    child<span style="color:#f92672">.</span><span style="color:#a6e22e">addAfter</span><span style="color:#f92672">(</span>collect<span style="color:#f92672">(</span>afters<span style="color:#f92672">));</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addBefore</span><span style="color:#f92672">(</span>Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    befores<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>block<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addAfter</span><span style="color:#f92672">(</span>Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    afters<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>block<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addSpec</span><span style="color:#f92672">(</span>String behavior<span style="color:#f92672">,</span> Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Description spec <span style="color:#f92672">=</span> createTestDescription<span style="color:#f92672">(</span>desc<span style="color:#f92672">.</span><span style="color:#a6e22e">getClassName</span><span style="color:#f92672">(),</span> behavior<span style="color:#f92672">);</span>
+    desc<span style="color:#f92672">.</span><span style="color:#a6e22e">addChild</span><span style="color:#f92672">(</span>spec<span style="color:#f92672">);</span>
+    addExecutor<span style="color:#f92672">(</span>spec<span style="color:#f92672">,</span> block<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addExecutor</span><span style="color:#f92672">(</span>Description desc<span style="color:#f92672">,</span> Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Spec spec <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Spec<span style="color:#f92672">(</span>desc<span style="color:#f92672">,</span> blocksInContext<span style="color:#f92672">(</span>block<span style="color:#f92672">));</span>
+    executors<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>spec<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> Block <span style="color:#a6e22e">blocksInContext</span><span style="color:#f92672">(</span>Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> collect<span style="color:#f92672">(</span>collect<span style="color:#f92672">(</span>befores<span style="color:#f92672">),</span> block<span style="color:#f92672">,</span> collect<span style="color:#f92672">(</span>afters<span style="color:#f92672">));</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="实现addchild">实现<code>addChild</code></h4>
+<p><code>describe</code>嵌套<code>describe</code>时，通过<code>addChild</code>完成了两件重要工作：</p>
+<ul>
+<li>「<code>子Context</code>」向「<code>父Context</code>」的注册；也就是说，<code>Context</code>之间形成了「树」形结构；</li>
+<li>控制<code>父Context</code>中的<code>before/after</code>的代码块集合对<code>子Context</code>的可见性；</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addChild</span><span style="color:#f92672">(</span>Context child<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  desc<span style="color:#f92672">.</span><span style="color:#a6e22e">addChild</span><span style="color:#f92672">(</span>child<span style="color:#f92672">.</span><span style="color:#a6e22e">desc</span><span style="color:#f92672">);</span>
+  executors<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>child<span style="color:#f92672">);</span>
+    
+  child<span style="color:#f92672">.</span><span style="color:#a6e22e">addBefore</span><span style="color:#f92672">(</span>collect<span style="color:#f92672">(</span>befores<span style="color:#f92672">));</span>
+  child<span style="color:#f92672">.</span><span style="color:#a6e22e">addAfter</span><span style="color:#f92672">(</span>collect<span style="color:#f92672">(</span>afters<span style="color:#f92672">));</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>其中，<code>collect</code>定义于<code>Block</code>接口中，完成<code>before/after</code>代码块「集合」的迭代处理。这类似于<code>OO</code>世界中的「组合模式」，它们代表了一种隐式的「树状结构」。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Block</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">apply</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> Throwable<span style="color:#f92672">;</span>
+
+  <span style="color:#66d9ef">static</span> Block <span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Iterable<span style="color:#f92672">&lt;?</span> <span style="color:#66d9ef">extends</span> Block<span style="color:#f92672">&gt;</span> blocks<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Block b <span style="color:#f92672">:</span> blocks<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        b<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">();</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">};</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="实现addexecutor">实现<code>addExecutor</code></h4>
+<p>其中，<code>Executor</code>存在两种情况:</p>
+<ul>
+<li><code>Spec:</code> 使用<code>it</code>定义的用例的代码块</li>
+<li><code>Context:</code> 使用<code>describe</code>定义上下文。</li>
+</ul>
+<p>为此，<code>addExecutor</code>被<code>addSpec, addChild</code>所调用。<code>addExecutor</code>调用时，将<code>Spec</code>注册到<code>Executor</code>集合中，并定义了<code>Spec</code>的「执行规则」。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addExecutor</span><span style="color:#f92672">(</span>Description desc<span style="color:#f92672">,</span> Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Spec spec <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Spec<span style="color:#f92672">(</span>desc<span style="color:#f92672">,</span> blocksInContext<span style="color:#f92672">(</span>block<span style="color:#f92672">));</span>
+    executors<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>spec<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> Block <span style="color:#a6e22e">blocksInContext</span><span style="color:#f92672">(</span>Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> collect<span style="color:#f92672">(</span>collect<span style="color:#f92672">(</span>befores<span style="color:#f92672">),</span> block<span style="color:#f92672">,</span> collect<span style="color:#f92672">(</span>afters<span style="color:#f92672">));</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><p><code>blocksInContext</code>将<code>it</code>的「执行序列」行为固化。</p>
+<ul>
+<li>首先执行<code>before</code>代码块集合；</li>
+<li>然后执行<code>it</code>代码块；</li>
+<li>最后执行<code>after</code>代码块集合；</li>
+</ul>
+<h3 id="抽象executor">抽象<code>Executor</code></h3>
+<p>之前谈过，<code>Executor</code>存在两种情况:</p>
+<ul>
+<li><code>Spec:</code> 使用<code>it</code>定义的用例的代码块</li>
+<li><code>Context:</code> 使用<code>describe</code>定义上下文。</li>
+</ul>
+<p>也就是说，<code>Executor</code>构成了一棵「树状」的数据结构；<code>it</code>扮演了「叶子节点」的角色；<code>Context</code>扮演了「非叶子节点」的角色。为此，<code>Executor</code>的设计采用了「组合模式」。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.runner.notification.RunNotifier<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@FunctionalInterface</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Executor</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">exec</span><span style="color:#f92672">(</span>RunNotifier notifier<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="叶子节点spec">叶子节点：<code>Spec</code></h4>
+<p><code>Spec</code>完成对<code>it</code>行为的封装，当<code>exec</code>时完成<code>it</code>代码块<code>() -&gt; {...}</code>的调用。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Spec</span> <span style="color:#66d9ef">implements</span> Executor <span style="color:#f92672">{</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Spec</span><span style="color:#f92672">(</span>Description desc<span style="color:#f92672">,</span> Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">desc</span> <span style="color:#f92672">=</span> desc<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">block</span> <span style="color:#f92672">=</span> block<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">exec</span><span style="color:#f92672">(</span>RunNotifier notifier<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    notifier<span style="color:#f92672">.</span><span style="color:#a6e22e">fireTestStarted</span><span style="color:#f92672">(</span>desc<span style="color:#f92672">);</span>
+    runSpec<span style="color:#f92672">(</span>notifier<span style="color:#f92672">);</span>
+    notifier<span style="color:#f92672">.</span><span style="color:#a6e22e">fireTestFinished</span><span style="color:#f92672">(</span>desc<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">runSpec</span><span style="color:#f92672">(</span>RunNotifier notifier<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+      block<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Throwable t<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      notifier<span style="color:#f92672">.</span><span style="color:#a6e22e">fireTestFailure</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Failure<span style="color:#f92672">(</span>desc<span style="color:#f92672">,</span> t<span style="color:#f92672">));</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> Description desc<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> Block block<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="非叶子节点context">非叶子节点：<code>Context</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Context</span> <span style="color:#66d9ef">implements</span> Executor <span style="color:#f92672">{</span>
+  <span style="color:#f92672">......</span>
+  
+  <span style="color:#66d9ef">private</span> Description desc<span style="color:#f92672">;</span>
+  
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">exec</span><span style="color:#f92672">(</span>RunNotifier notifier<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Executor e <span style="color:#f92672">:</span> executors<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      e<span style="color:#f92672">.</span><span style="color:#a6e22e">exec</span><span style="color:#f92672">(</span>notifier<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="实现dsl">实现<code>DSL</code></h3>
+<p>有了<code>Context</code>的领域模型的基础，<code>DSL</code>的实现变得简单了。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JSpec</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Deque<span style="color:#f92672">&lt;</span>Context<span style="color:#f92672">&gt;</span> ctxts <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayDeque<span style="color:#f92672">&lt;</span>Context<span style="color:#f92672">&gt;();</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">describe</span><span style="color:#f92672">(</span>String desc<span style="color:#f92672">,</span> Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Context ctxt <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Context<span style="color:#f92672">(</span>createSuiteDescription<span style="color:#f92672">(</span>desc<span style="color:#f92672">));</span>
+    enterCtxt<span style="color:#f92672">(</span>ctxt<span style="color:#f92672">,</span> block<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">it</span><span style="color:#f92672">(</span>String behavior<span style="color:#f92672">,</span> Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    currentCtxt<span style="color:#f92672">().</span><span style="color:#a6e22e">addSpec</span><span style="color:#f92672">(</span>behavior<span style="color:#f92672">,</span> block<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">before</span><span style="color:#f92672">(</span>Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    currentCtxt<span style="color:#f92672">().</span><span style="color:#a6e22e">addBefore</span><span style="color:#f92672">(</span>block<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">after</span><span style="color:#f92672">(</span>Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    currentCtxt<span style="color:#f92672">().</span><span style="color:#a6e22e">addAfter</span><span style="color:#f92672">(</span>block<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">enterCtxt</span><span style="color:#f92672">(</span>Context ctxt<span style="color:#f92672">,</span> Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    currentCtxt<span style="color:#f92672">().</span><span style="color:#a6e22e">addChild</span><span style="color:#f92672">(</span>ctxt<span style="color:#f92672">);</span>
+    applyBlock<span style="color:#f92672">(</span>ctxt<span style="color:#f92672">,</span> block<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">applyBlock</span><span style="color:#f92672">(</span>Context ctxt<span style="color:#f92672">,</span> Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    ctxts<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>ctxt<span style="color:#f92672">);</span>
+    doApplyBlock<span style="color:#f92672">(</span>block<span style="color:#f92672">);</span>
+    ctxts<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doApplyBlock</span><span style="color:#f92672">(</span>Block block<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+      block<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Throwable e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      it<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;happen to an error&#34;</span><span style="color:#f92672">,</span> failing<span style="color:#f92672">(</span>e<span style="color:#f92672">));</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Context <span style="color:#a6e22e">currentCtxt</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> ctxts<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">();</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="上下文切换">上下文切换</h4>
+<p>但为了控制<code>Context</code>之间的「树型关系」(即<code>describe</code>的嵌套关系)，为此建立了一个<code>Stack</code>的机制，保证运行时在某一个时刻<code>Context</code>的唯一性。</p>
+<p>只有<code>describe</code>的调用会开启「上下文的建立」，并完成上下文「父子关系」的链接。其余操作，例如<code>it, before, after</code>都是在当前上下文进行「元信息」的注册。</p>
+<h4 id="虚拟的根结点">虚拟的根结点</h4>
+<p>使用静态初始化块，完成「虚拟根结点」的注册；也就是说，在运行时初始化时，栈中已存在唯一的<code> Context(&quot;JSpec: All Specs&quot;)</code>虚拟根节点。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JSpec</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Deque<span style="color:#f92672">&lt;</span>Context<span style="color:#f92672">&gt;</span> ctxts <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayDeque<span style="color:#f92672">&lt;</span>Context<span style="color:#f92672">&gt;();</span>
+
+  <span style="color:#66d9ef">static</span> <span style="color:#f92672">{</span>
+    ctxts<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Context<span style="color:#f92672">(</span>createSuiteDescription<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;JSpec: All Specs&#34;</span><span style="color:#f92672">)));</span>
+  <span style="color:#f92672">}</span>
+  
+  <span style="color:#f92672">......</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="运行器">运行器</h3>
+<p>为了配合<code>JUnit</code>框架将<code>JSpec</code>运行起来，需要定制一个<code>JUnit</code>的<code>Runner</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JSpec</span> <span style="color:#66d9ef">extends</span> Runner <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> Description desc<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> Context root<span style="color:#f92672">;</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">JSpec</span><span style="color:#f92672">(</span>Class<span style="color:#f92672">&lt;?&gt;</span> suite<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    desc <span style="color:#f92672">=</span> createSuiteDescription<span style="color:#f92672">(</span>suite<span style="color:#f92672">);</span>
+    root <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Context<span style="color:#f92672">(</span>desc<span style="color:#f92672">);</span>
+    enterCtxt<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> reflect<span style="color:#f92672">(</span>suite<span style="color:#f92672">));</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> Description <span style="color:#a6e22e">getDescription</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> desc<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>RunNotifier notifier<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    root<span style="color:#f92672">.</span><span style="color:#a6e22e">exec</span><span style="color:#f92672">(</span>notifier<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+  
+  <span style="color:#f92672">......</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>在编写用例时，使用<code>@RunWith(JSpec.class)</code>注解，告诉<code>JUnit</code>定制化了运行器的行为。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>JSpec<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JSpecs</span> <span style="color:#f92672">{{</span>
+  <span style="color:#f92672">......</span>
+<span style="color:#f92672">}}</span>
+</code></pre></div><p>在之前已讨论过，<code>JSpec</code>的<code>run</code>无非就是将「以树形组织的」<code>Executor</code>集合调度起来。</p>
+<h4 id="实现reflect">实现<code>reflect</code></h4>
+<p><code>JUnit</code>在运行时，首先看到了<code>@RunWith(JSpec.class)</code>注解，然后反射调用<code>JSpec</code>的构造函数。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">JSpec</span><span style="color:#f92672">(</span>Class<span style="color:#f92672">&lt;?&gt;</span> suite<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  desc <span style="color:#f92672">=</span> createSuiteDescription<span style="color:#f92672">(</span>suite<span style="color:#f92672">);</span>
+  root <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Context<span style="color:#f92672">(</span>desc<span style="color:#f92672">);</span>
+  enterCtxt<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> reflect<span style="color:#f92672">(</span>suite<span style="color:#f92672">));</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>通过<code>Block.reflect</code>的工厂方法，将开始执行测试用例集的「初始化块」。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Block</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">apply</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> Throwable<span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">static</span> Block <span style="color:#a6e22e">reflect</span><span style="color:#f92672">(</span>Class<span style="color:#f92672">&lt;?&gt;</span> c<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+      Constructor<span style="color:#f92672">&lt;?&gt;</span> cons <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getDeclaredConstructor</span><span style="color:#f92672">();</span>
+      cons<span style="color:#f92672">.</span><span style="color:#a6e22e">setAccessible</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+      cons<span style="color:#f92672">.</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">};</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>此刻，被<code>@RunWith(JSpec.class)</code>注解标注的「初始化块」被执行。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>JSpec<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JSpecs</span> <span style="color:#f92672">{{</span>
+  <span style="color:#f92672">......</span>
+<span style="color:#f92672">}}</span>
+</code></pre></div><p>在「初始化块」中顺序完成对<code>describe, it, before, after</code>等子句的调用，其中：</p>
+<ul>
+<li><code>describe</code>开辟新的<code>Context</code>；</li>
+<li><code>describe</code>可以递归地调用内部嵌套的<code>describe</code>；</li>
+<li><code>describe</code>调用<code>it, before, after</code>时，将信息注册到了<code>Context</code>中；</li>
+<li>最终<code>Runner.run</code>将<code>Executor</code>集合按照「树」的组织方式调度起来；</li>
+</ul>
+<h2 id="github">GitHub</h2>
+<p><code>JSpec</code>已上传至<code>GitHub：</code><a href="https://github.com/horance-liu/jspec">https://github.com/horance-liu/jspec</a>，代码细节请参考源代码。</p>
+</div>
+        </div>
+          
+        
+      </div>
+    </div>
+  </section>
+  
+
+  
+  <section class="pb-50">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-6 col-md-9 text-center mb-40">
+          <h2 class="section-title">Recent Articles</h2>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="col-lg-4 col-md-6 mb-40">
+          <div class="card border-0 h-100">
+            <a class="d-flex flex-fill align-items-center" href="https://joycode-art.github.io/en/blog/post-1/"><img class="card-img-top rounded" src="https://joycode-art.github.io/images/blogs/01.jpg" alt="blog-image"></a>
+            <div class="p-25 pb-0">
+              <div class="post-category position-relative mb-15"><a
+                href="/en/categories/technology" class="text-black-200 font-weight-600 ml-1">Technology </a>
+                
+              </div>
+              <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/en/blog/post-1/">Programming DSL: Implements JSpec</a>
+              <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>4 Mins Read
+              </div>
+              <p>There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-40">
+          <div class="card border-0 h-100">
+            <a class="d-flex flex-fill align-items-center" href="https://joycode-art.github.io/en/blog/post-2/"><img class="card-img-top rounded" src="https://joycode-art.github.io/images/blogs/02.jpg" alt="blog-image"></a>
+            <div class="p-25 pb-0">
+              <div class="post-category position-relative mb-15"><a
+                href="/en/categories/science" class="text-black-200 font-weight-600 ml-1">Science </a>
+                
+              </div>
+              <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/en/blog/post-2/">Your ‘Surge Capacity’ Is Depleted It’s Why You Feel Awful to The Society</a>
+              <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>2 Mins Read
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-40">
+          <div class="card border-0 h-100">
+            <a class="d-flex flex-fill align-items-center" href="https://joycode-art.github.io/en/blog/post-3/"><img class="card-img-top rounded" src="https://joycode-art.github.io/images/blogs/03.jpg" alt="blog-image"></a>
+            <div class="p-25 pb-0">
+              <div class="post-category position-relative mb-15"><a
+                href="/en/categories/technology" class="text-black-200 font-weight-600 ml-1">Technology </a>
+                
+              </div>
+              <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/en/blog/post-3/">Your ‘Surge Capacity’ Is Depleted It’s Why You Feel Awful to The Society</a>
+              <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>2 Mins Read
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+
+
+<footer class="bg-light-gray has-shapes has-bg-brash bg-brash-top "
+  style="background-image: url('https://joycode-art.github.io/images/brushes/footer.svg')">
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="block border-top text-center content">Designed By <a href="https://joycode.art/">JoyCode Inc.</a></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shape-1 shape-xs bg-orange rounded-circle"></div>
+  <div class="shape-2 shape-sm-2 bg-cyan rounded-circle"></div>
+  <div class="shape-3 shape-sm bg-yellow rounded-circle"></div>
+  <div class="shape-4 shape-xs-2 bg-cyan rounded-circle"></div>
+  <div class="shape-5 shape-sm-2 bg-yellow rounded-circle"></div>
+  <div class="shape-6 shape-sm-2 bg-orange rounded-circle"></div>
+</footer>
+
+
+
+<a href="#top" class="btn btn-primary scroll-to-top-btn smooth-scroll position-fixed"><svg
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+    <path id="Layer" fill="currentColor"
+      d="M7.2 19.2L15.2 11.2C15.68 10.71 16.43 10.68 16.96 11.08L17.08 11.2L25.08 19.2L23.2 21.08L16.14 14.02L9.08 21.08L7.2 19.2Z" />
+    </svg></a>
+
+
+<!-- JS Plugins -->
+
+<script src="https://joycode-art.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/shuffle/shuffle.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/aos/aos.js"></script>
+
+
+<!-- Main Script -->
+
+<script src="https://joycode-art.github.io/js/script.min.js"></script></body>
+
+</html>

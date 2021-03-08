@@ -2025,18 +2025,18 @@ a.text-black-400:hover {
   color: #fff;
   opacity: 1; }
 
-.brand-carousel .slick-list {
+.clients .slick-list {
   margin-left: -17px; }
 
-.brand-carousel .brand-item {
+.clients .brand-item {
   height: 45px;
   margin-left: 17px; }
-  .brand-carousel .brand-item img {
+  .clients .brand-item img {
     z-index: -1;
     transition: .3s ease-out;
     opacity: .5;
     filter: grayscale(1); }
-  .brand-carousel .brand-item:hover img {
+  .clients .brand-item:hover img {
     opacity: 1;
     filter: grayscale(0); }
 
@@ -2048,7 +2048,7 @@ a.text-black-400:hover {
   font-weight: 600;
   position: relative;
   padding-top: 0;
-  min-width: 180px;
+  min-width: 148px;
   text-align: center;
   z-index: 1;
   color: #333333; }

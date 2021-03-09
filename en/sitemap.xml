@@ -335,18 +335,6 @@
                 href="https://joycode-art.github.io/en/testimonial/"
                 />
   </url><url>
-    <loc>https://joycode-art.github.io/en/team/02-liuguangcong/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/team/02-liuguangcong/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/team/02-liuguangcong/"
-                />
-  </url><url>
     <loc>https://joycode-art.github.io/en/team/</loc>
     <xhtml:link
                 rel="alternate"
@@ -357,6 +345,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joycode-art.github.io/en/team/"
+                />
+  </url><url>
+    <loc>https://joycode-art.github.io/en/team/02-liuguangcong/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://joycode-art.github.io/team/02-liuguangcong/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joycode-art.github.io/en/team/02-liuguangcong/"
                 />
   </url><url>
     <loc>https://joycode-art.github.io/en/team/03-weigangqiang/</loc>

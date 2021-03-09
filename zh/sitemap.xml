@@ -325,6 +325,18 @@
                 href="https://joycode-art.github.io/testimonial/"
                 />
   </url><url>
+    <loc>https://joycode-art.github.io/team/01-wangbo/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joycode-art.github.io/en/team/01-wangbo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://joycode-art.github.io/team/01-wangbo/"
+                />
+  </url><url>
     <loc>https://joycode-art.github.io/team/02-liuguangcong/</loc>
     <xhtml:link
                 rel="alternate"
@@ -335,18 +347,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://joycode-art.github.io/team/02-liuguangcong/"
-                />
-  </url><url>
-    <loc>https://joycode-art.github.io/team/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/team/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/team/"
                 />
   </url><url>
     <loc>https://joycode-art.github.io/team/03-weigangqiang/</loc>
@@ -373,6 +373,18 @@
                 href="https://joycode-art.github.io/team/04-zhangchao/"
                 />
   </url><url>
+    <loc>https://joycode-art.github.io/team/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joycode-art.github.io/en/team/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://joycode-art.github.io/team/"
+                />
+  </url><url>
     <loc>https://joycode-art.github.io/solution/05-ai/</loc>
     <xhtml:link
                 rel="alternate"
@@ -383,18 +395,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://joycode-art.github.io/solution/05-ai/"
-                />
-  </url><url>
-    <loc>https://joycode-art.github.io/team/01-wangbo/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/team/01-wangbo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/team/01-wangbo/"
                 />
   </url><url>
     <loc>https://joycode-art.github.io/solution/01-hardcore-tech/</loc>

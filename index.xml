@@ -118,6 +118,15 @@
     
     <item>
       <title>个人介绍</title>
+      <link>https://joycode-art.github.io/team/01-wangbo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/team/01-wangbo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>个人介绍</title>
       <link>https://joycode-art.github.io/team/02-liuguangcong/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -126,7 +135,7 @@
     </item>
     
     <item>
-      <title>尉刚强</title>
+      <title>个人介绍</title>
       <link>https://joycode-art.github.io/team/03-weigangqiang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -135,7 +144,7 @@
     </item>
     
     <item>
-      <title>张超</title>
+      <title>个人介绍</title>
       <link>https://joycode-art.github.io/team/04-zhangchao/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -150,15 +159,6 @@
       
       <guid>https://joycode-art.github.io/solution/05-ai/</guid>
       <description>AI芯片 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
-    </item>
-    
-    <item>
-      <title>王博</title>
-      <link>https://joycode-art.github.io/team/01-wangbo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://joycode-art.github.io/team/01-wangbo/</guid>
-      <description></description>
     </item>
     
     <item>

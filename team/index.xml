@@ -7,5 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Designed By [JoyCode](https://joycode.art/)</copyright><atom:link href="https://joycode-art.github.io/team/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>个人介绍</title>
+      <link>https://joycode-art.github.io/team/02-liuguangcong/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/team/02-liuguangcong/</guid>
+      <description>概况介绍 软件技术咨询师，全栈程序员，专注于大型系统软件的领域建模设计、组件化与服务化架构演进、遗留系统重构与开发者测试等领域。拥有10多年大型电信软件系统的工作和咨询经验，在大型嵌入式软件平台、无线4G/5G业务软件、机器学习计算平台等相关领域提供技术咨询服务。曾作为“2016全球C++及系统软件大会”，“2017全球机器学习大会”，“2019全球C++软件技术大会”，“2020全球C++软件技术大会”主题讲师。拥有开源著作《TensorFlow内核剖析》一部，Google认证的机器学习GDE技术专家。          咨询案例 全球知名电信设备制造商：新一代无线RRU软件平台的架构演进咨询项目 作为技术咨询师，全力参与新一代无线RRU软件平台的架构演进过程，通过领域模型的演进式设计方法，有效解决业务深层的复杂度，并通过模型有效表达架构意图和业务逻辑，有效协同多个异地并行开发。</description>
+    </item>
+    
+    <item>
+      <title>尉刚强</title>
+      <link>https://joycode-art.github.io/team/03-weigangqiang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/team/03-weigangqiang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>张超</title>
+      <link>https://joycode-art.github.io/team/04-zhangchao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/team/04-zhangchao/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>王博</title>
+      <link>https://joycode-art.github.io/team/01-wangbo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/team/01-wangbo/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

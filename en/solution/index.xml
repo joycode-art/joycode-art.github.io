@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>解决方案 on JoyCode: A Hardcore Software Consultancy | JoyCode</title>
+    <link>https://joycode-art.github.io/en/solution/</link>
+    <description>Recent content in 解决方案 on JoyCode: A Hardcore Software Consultancy | JoyCode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Designed By [JoyCode Inc.](https://joycode.art/)</copyright><atom:link href="https://joycode-art.github.io/en/solution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>智能与数据工程</title>
+      <link>https://joycode-art.github.io/en/solution/05-ai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/en/solution/05-ai/</guid>
+      <description>AI芯片 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+    </item>
+    
+    <item>
+      <title>硬核技术</title>
+      <link>https://joycode-art.github.io/en/solution/01-hardcore-tech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/en/solution/01-hardcore-tech/</guid>
+      <description>操作系统 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+    </item>
+    
+    <item>
+      <title>系统工程效率</title>
+      <link>https://joycode-art.github.io/en/solution/03-efficiency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/en/solution/03-efficiency/</guid>
+      <description>DevOps原则 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+    </item>
+    
+    <item>
+      <title>系统性能工程</title>
+      <link>https://joycode-art.github.io/en/solution/02-system-perf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/en/solution/02-system-perf/</guid>
+      <description>性能模型 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+    </item>
+    
+    <item>
+      <title>软件架构优化</title>
+      <link>https://joycode-art.github.io/en/solution/04-soft-arch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/en/solution/04-soft-arch/</guid>
+      <description>架构风格 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+    </item>
+    
+  </channel>
+</rss>

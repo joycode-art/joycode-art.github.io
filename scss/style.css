@@ -458,6 +458,9 @@ a.text-underline:hover {
 .bg-light-gray {
   background-color: #F6F6F6; }
 
+.bg-light-white {
+  background-color: #ffffff; }
+
 .text-primary {
   color: #FF3158 !important; }
 

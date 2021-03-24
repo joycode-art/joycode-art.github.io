@@ -48,36 +48,6 @@
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/categories/science/</loc>
-    <lastmod>2020-03-14T15:40:24+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/categories/science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/categories/science/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joycode-art.github.io/categories/technology/</loc>
-    <lastmod>2020-03-14T15:40:24+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/categories/technology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/categories/technology/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joycode-art.github.io/blog/post-5/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
     <xhtml:link
@@ -123,6 +93,21 @@
   </url>
   
   <url>
+    <loc>https://joycode-art.github.io/blog/post-4/</loc>
+    <lastmod>2020-03-14T15:40:24+06:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joycode-art.github.io/en/blog/post-4/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://joycode-art.github.io/blog/post-4/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joycode-art.github.io/blog/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
     <xhtml:link
@@ -138,18 +123,28 @@
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/blog/post-4/</loc>
+    <loc>https://joycode-art.github.io/categories/%E6%99%BA%E8%83%BD%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%B7%A5%E7%A8%8B/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/blog/post-4/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/blog/post-4/"
-                />
+  </url>
+  
+  <url>
+    <loc>https://joycode-art.github.io/categories/%E7%A1%AC%E6%A0%B8%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2020-03-14T15:40:24+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joycode-art.github.io/categories/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E6%95%88%E7%8E%87/</loc>
+    <lastmod>2020-03-14T15:40:24+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joycode-art.github.io/categories/%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E5%B7%A5%E7%A8%8B/</loc>
+    <lastmod>2020-03-14T15:40:24+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joycode-art.github.io/categories/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2020-03-14T15:40:24+06:00</lastmod>
   </url>
   
   <url>
@@ -464,15 +459,15 @@
   </url>
   
   <url>
+    <loc>https://joycode-art.github.io/story/</loc>
+  </url>
+  
+  <url>
     <loc>https://joycode-art.github.io/story/03-devops/</loc>
   </url>
   
   <url>
     <loc>https://joycode-art.github.io/training/02-system-perf/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joycode-art.github.io/story/</loc>
   </url>
   
   <url>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>系统性能工程 on JoyCode: A Hardcore Software Consultancy | JoyCode</title>
+    <link>https://joycode-art.github.io/categories/%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E5%B7%A5%E7%A8%8B/</link>
+    <description>Recent content in 系统性能工程 on JoyCode: A Hardcore Software Consultancy | JoyCode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Designed By [JoyCode](https://joycode.art/)</copyright>
+    <lastBuildDate>Sat, 14 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="https://joycode-art.github.io/categories/%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>性能优化</title>
+      <link>https://joycode-art.github.io/blog/post-4/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://joycode-art.github.io/blog/post-4/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</description>
+    </item>
+    
+  </channel>
+</rss>

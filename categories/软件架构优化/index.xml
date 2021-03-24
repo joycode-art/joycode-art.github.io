@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件架构优化 on JoyCode: A Hardcore Software Consultancy | JoyCode</title>
+    <link>https://joycode-art.github.io/categories/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%BC%98%E5%8C%96/</link>
+    <description>Recent content in 软件架构优化 on JoyCode: A Hardcore Software Consultancy | JoyCode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Designed By [JoyCode](https://joycode.art/)</copyright>
+    <lastBuildDate>Sat, 14 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="https://joycode-art.github.io/categories/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>重构</title>
+      <link>https://joycode-art.github.io/blog/post-3/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://joycode-art.github.io/blog/post-3/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</description>
+    </item>
+    
+  </channel>
+</rss>

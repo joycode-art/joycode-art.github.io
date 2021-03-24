@@ -149,7 +149,52 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://joycode-art.github.io/team/04-zhangchao/</guid>
-      <description></description>
+      <description> 概况介绍 软件技术咨询师。专注于大型系统软件的领域建模架构设计、遗留系统重构，开发者测试、性能优化与防护等领域。拥有10年的大规模嵌入式实时系统c/c++开发经验，为多家知名企业提供大规模嵌入式遗留系统重构、性能优化、性能防护设计、微服务架构转型设计、测试框架的设计、DevOps转型提供技术咨询服务。在咨询过程中善于技术探索与实践落地，咨询效果广受客户的好评。          咨询案例  华为:软件技术变革  嵌入式软件重构 架构设计与演进 C语言切换C++   平安集团：业务领域建模  DDD业务领域建模， 需求模型建立   深圳农商银行：手机银行技术转型  CICD搭建 设计分支模型和自动化方案 测试技术培训   中兴 :敏捷技术转型  事务级微服务框架设计 嵌入式系统性能优化，性能CI防护设计 测试框架设计 嵌入式遗留系统c++代码的重构       2020全球C++及系统软件大会  《C++Modules与大规模物理设计》            证书  EXIN DevOps Master KMP Foundation I（LeanKanban）       </description>
+    </item>
+    
+    <item>
+      <title>个人介绍</title>
+      <link>https://joycode-art.github.io/team/05-tongjian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/team/05-tongjian/</guid>
+      <description>概况介绍 从业经验丰富，有十五年以上的软件行业从业经验。对软件开发端到端全流程都有丰富的经验，曾担任过软件工程师、架构师、业务分析师、项目经理、产品经理。在敏捷软件开发过程，软件设计，系统架构，大规模遗留系统重构方面有非常丰富的实战经验，不仅仅是精通各种方法论的理论内容，还针对各种理论里落地时语焉不详的部分采用不同的方法相结合的方式进行了有益补充，减少客户在落地时走弯路。 除了丰富的技术实战经验，在咨询和培训方面也有丰富的经验，曾服务华为、中移动、招行、建行、浦发、平安、京东、联想、顺丰、中石油等多家中国企业，也曾服务过Springer、Nokia等外国跨国企业。具备丰富的课程设计经验，自研了多门课程，涉及软件开发端到端每个主要环节，并且帮助多家客户设计了适合客户诉求的定制化课程。 在企业内部创新创业方面也有一定的经验，身为思特沃克中国区数字学院——“思特沃克学院”创始人，从无到有的建立起整个内训和外训团队及内部培训和对外培训业务。并将这方面的经验用于了辅导客户内部学院打造、创新项目孵化。           数字化人才培养  通讯领域 金融领域 互联网领域 能源领域 物流运输领域   校企合作 2013年至2014年与多所大学配合开展各种技术实践课及校内实验室合作，包括</description>
+    </item>
+    
+    <item>
+      <title>全球知名通信设备制造企业：现代化软件工程效率提升</title>
+      <link>https://joycode-art.github.io/story/01-refactor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/story/01-refactor/</guid>
+      <description>操作系统 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+    </item>
+    
+    <item>
+      <title>全球知名通信设备制造企业：系统性能优化工程</title>
+      <link>https://joycode-art.github.io/story/02-system-perf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/story/02-system-perf/</guid>
+      <description>性能模型 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+    </item>
+    
+    <item>
+      <title>国内银行：DevOps设计应用</title>
+      <link>https://joycode-art.github.io/story/03-devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/story/03-devops/</guid>
+      <description>性能模型 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+    </item>
+    
+    <item>
+      <title>培训课程</title>
+      <link>https://joycode-art.github.io/training/02-system-perf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/training/02-system-perf/</guid>
+      <description>性能模型 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
     </item>
     
     <item>
@@ -186,6 +231,15 @@
       
       <guid>https://joycode-art.github.io/solution/02-system-perf/</guid>
       <description>性能模型 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+    </item>
+    
+    <item>
+      <title>训练营</title>
+      <link>https://joycode-art.github.io/training/01-refactor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/training/01-refactor/</guid>
+      <description>操作系统 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
     </item>
     
     <item>

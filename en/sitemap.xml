@@ -75,11 +75,31 @@
   <url>
     <loc>https://joycode-art.github.io/en/categories/science/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://joycode-art.github.io/categories/science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joycode-art.github.io/en/categories/science/"
+                />
   </url>
   
   <url>
     <loc>https://joycode-art.github.io/en/categories/technology/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://joycode-art.github.io/categories/technology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joycode-art.github.io/en/categories/technology/"
+                />
   </url>
   
   <url>

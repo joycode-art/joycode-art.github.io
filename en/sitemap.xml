@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://joycode-art.github.io/en/english/</loc>
+    <lastmod>2020-03-15T15:40:24+06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joycode-art.github.io/en/</loc>
     <lastmod>2020-03-15T15:40:24+06:00</lastmod>
     <xhtml:link
@@ -18,28 +23,18 @@
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/privacy-policy/</loc>
+    <loc>https://joycode-art.github.io/en/english/privacy-policy/</loc>
     <lastmod>2020-03-15T15:40:24+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/terms-conditions/</loc>
+    <loc>https://joycode-art.github.io/en/english/terms-conditions/</loc>
     <lastmod>2020-03-15T15:40:24+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/blog/</loc>
+    <loc>https://joycode-art.github.io/en/english/blog/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/blog/"
-                />
   </url>
   
   <url>
@@ -58,18 +53,8 @@
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/blog/post-1/</loc>
+    <loc>https://joycode-art.github.io/en/english/blog/post-1/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/blog/post-1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/blog/post-1/"
-                />
   </url>
   
   <url>
@@ -83,268 +68,88 @@
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/blog/post-2/</loc>
+    <loc>https://joycode-art.github.io/en/english/blog/post-2/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/blog/post-2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/blog/post-2/"
-                />
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/blog/post-3/</loc>
+    <loc>https://joycode-art.github.io/en/english/blog/post-3/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/blog/post-3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/blog/post-3/"
-                />
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/blog/post-4/</loc>
+    <loc>https://joycode-art.github.io/en/english/blog/post-4/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/blog/post-4/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/blog/post-4/"
-                />
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/blog/post-5/</loc>
+    <loc>https://joycode-art.github.io/en/english/blog/post-5/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/blog/post-5/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/blog/post-5/"
-                />
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/blog/post-6/</loc>
+    <loc>https://joycode-art.github.io/en/english/blog/post-6/</loc>
     <lastmod>2020-03-14T15:40:24+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/blog/post-6/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/blog/post-6/"
-                />
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/about/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/about/"
-                />
+    <loc>https://joycode-art.github.io/en/english/about/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/career/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/career/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/career/"
-                />
+    <loc>https://joycode-art.github.io/en/english/career/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/changelog/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/changelog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/changelog/"
-                />
+    <loc>https://joycode-art.github.io/en/english/changelog/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/contact/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/contact/"
-                />
+    <loc>https://joycode-art.github.io/en/english/contact/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/faq/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/faq/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/faq/"
-                />
+    <loc>https://joycode-art.github.io/en/english/faq/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/career/job-4/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/career/job-4/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/career/job-4/"
-                />
+    <loc>https://joycode-art.github.io/en/english/career/job-4/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/career/job-6/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/career/job-6/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/career/job-6/"
-                />
+    <loc>https://joycode-art.github.io/en/english/career/job-6/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/career/job-2/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/career/job-2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/career/job-2/"
-                />
+    <loc>https://joycode-art.github.io/en/english/career/job-2/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/how-it-works/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/how-it-works/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/how-it-works/"
-                />
+    <loc>https://joycode-art.github.io/en/english/how-it-works/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/career/job-3/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/career/job-3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/career/job-3/"
-                />
+    <loc>https://joycode-art.github.io/en/english/career/job-3/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/career/job-1/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/career/job-1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/career/job-1/"
-                />
+    <loc>https://joycode-art.github.io/en/english/career/job-1/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/career/job-5/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/career/job-5/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/career/job-5/"
-                />
+    <loc>https://joycode-art.github.io/en/english/career/job-5/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/pricing/</loc>
+    <loc>https://joycode-art.github.io/en/english/pricing/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/pricing-2/</loc>
+    <loc>https://joycode-art.github.io/en/english/pricing-2/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/services/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/services/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/services/"
-                />
+    <loc>https://joycode-art.github.io/en/english/services/</loc>
   </url>
   
   <url>
@@ -362,171 +167,51 @@
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/testimonial/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/testimonial/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/testimonial/"
-                />
+    <loc>https://joycode-art.github.io/en/english/testimonial/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/team/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/team/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/team/"
-                />
+    <loc>https://joycode-art.github.io/en/english/team/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/team/02-liuguangcong/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/team/02-liuguangcong/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/team/02-liuguangcong/"
-                />
+    <loc>https://joycode-art.github.io/en/english/team/02-liuguangcong/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/team/03-weigangqiang/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/team/03-weigangqiang/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/team/03-weigangqiang/"
-                />
+    <loc>https://joycode-art.github.io/en/english/team/03-weigangqiang/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/team/04-zhangchao/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/team/04-zhangchao/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/team/04-zhangchao/"
-                />
+    <loc>https://joycode-art.github.io/en/english/team/04-zhangchao/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/solution/05-ai/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/solution/05-ai/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/solution/05-ai/"
-                />
+    <loc>https://joycode-art.github.io/en/english/solution/05-ai/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/team/01-wangbo/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/team/01-wangbo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/team/01-wangbo/"
-                />
+    <loc>https://joycode-art.github.io/en/english/team/01-wangbo/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/solution/01-hardcore-tech/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/solution/01-hardcore-tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/solution/01-hardcore-tech/"
-                />
+    <loc>https://joycode-art.github.io/en/english/solution/01-hardcore-tech/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/solution/03-efficiency/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/solution/03-efficiency/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/solution/03-efficiency/"
-                />
+    <loc>https://joycode-art.github.io/en/english/solution/03-efficiency/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/solution/02-system-perf/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/solution/02-system-perf/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/solution/02-system-perf/"
-                />
+    <loc>https://joycode-art.github.io/en/english/solution/02-system-perf/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/solution/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/solution/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/solution/"
-                />
+    <loc>https://joycode-art.github.io/en/english/solution/</loc>
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/en/solution/04-soft-arch/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://joycode-art.github.io/solution/04-soft-arch/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joycode-art.github.io/en/solution/04-soft-arch/"
-                />
+    <loc>https://joycode-art.github.io/en/english/solution/04-soft-arch/</loc>
   </url>
   
 </urlset>

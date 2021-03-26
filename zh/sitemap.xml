@@ -187,11 +187,7 @@
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/story/01-refactor/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joycode-art.github.io/story/02-system-perf/</loc>
+    <loc>https://joycode-art.github.io/story/01-architecture-evolution/</loc>
   </url>
   
   <url>
@@ -200,10 +196,6 @@
   
   <url>
     <loc>https://joycode-art.github.io/story/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joycode-art.github.io/story/03-devops/</loc>
   </url>
   
   <url>
@@ -216,6 +208,22 @@
   
   <url>
     <loc>https://joycode-art.github.io/solution/05-ai/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joycode-art.github.io/story/05-open-source/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joycode-art.github.io/story/02-system-perf/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joycode-art.github.io/story/04-auto-testing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joycode-art.github.io/story/03-efficiency-optimization/</loc>
   </url>
   
   <url>

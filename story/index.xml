@@ -8,30 +8,58 @@
     <language>zh-cn</language>
     <copyright>Designed By [JoyCode](https://joycode.art/)</copyright><atom:link href="https://joycode-art.github.io/story/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>全球知名通信设备制造企业：现代化软件工程效率提升</title>
-      <link>https://joycode-art.github.io/story/01-refactor/</link>
+      <title>全球知名无线设备提供商的软件架构演进项目</title>
+      <link>https://joycode-art.github.io/story/01-architecture-evolution/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://joycode-art.github.io/story/01-refactor/</guid>
-      <description>操作系统 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+      <guid>https://joycode-art.github.io/story/01-architecture-evolution/</guid>
+      <description>问题 某无线设备软件，为了支持全球客户，一套软件（百万代码行）需要兼容每年交付几十块不同的硬件单板（单板上的芯片和物理器件不完全相同），导致软件架构腐化快，构建工程复杂难以溯源、测试效率低，软件难以裁剪，不能满足国外高端客户的代码白盒质量监视要求。
+咨询过程 根据客户软件特点，分析软件需要响应的变化方向和裁剪需求，结合构建溯源和测试效率要求，和客户业务专家一起对软件进行领域建模，将不同的软件变化方向、生命周期、裁剪尺度进行组件化解耦，同时设计了一套硬件单板软件的在线建模配置以及代码生成工具链，帮助客户提升开发和测试效率。带领客户攻关团队进行了架构打样，完成了核心代码的开发测试和交付，过程中同时帮客户构筑起更加高效的软件构建工程和开发者测试工程能力。
+成果 新的设计方案完全解决客户问题，获得客户高度认可。带领客户团队开发交付了核心代码验证了架构设计，新开发的代码相比原来同样功能的代码量下降70%，同时构建效率提升了一倍。</description>
     </item>
     
     <item>
-      <title>全球知名通信设备制造企业：系统性能优化工程</title>
+      <title>某云技术厂商基板管理控制软件开源生态演进项目</title>
+      <link>https://joycode-art.github.io/story/05-open-source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/story/05-open-source/</guid>
+      <description>问题 某云技术厂商基板管理控制软件，一直采用内部开发集成交付方式。迫于竞争对手开源的压力，需要重构软件架构和工程能力，做到新的软件平台未来可以能力开放，多方协作，生态化发展。
+咨询过程 和客户的架构师以及软件总工程师，一起设计新平台的软件架构和工程架构。新的架构制定了一套二进制兼容的接口标准，做到可以按照组件和插件级别进行独立开发、独立构建、独立测试以及二进制级别交付和复用。同时优化了配套的工程能力，做到可以按照组件进行代码独立分仓，采用容器技术对工具链进行标准发布和复用，搭建可以一键式获取和安装工具链并下载依赖代码同时执行构建和测试的开发框架。最后带领客户团队完成了平台核心框架的代码开发以及工程能力建设。
+成果 新的平台设计和工程设计达成了客户未来面向开源多方协作，生态化发展的战略要求，带领客户团队完成了核心关键代码的开发和验证。</description>
+    </item>
+    
+    <item>
+      <title>某电信设备公司软件性能优化项目</title>
       <link>https://joycode-art.github.io/story/02-system-perf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://joycode-art.github.io/story/02-system-perf/</guid>
-      <description>性能模型 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+      <description>问题 某电信技术公司的核心设备产品，与竞争对手公司产品相比，关键业务性能指标落后一倍，希望借助架构和代码优化提升性能，同时降低资源占用。
+咨询过程 分析客户业务场景，走读客户代码，对代码进行了静态和动态的性能建模分析。通过对模型进行设计优化，从静态视图推导更合理的高性能内存模型，从动态视图推导更高效的调度和计算模型，以此给出新的设计方案。在方案获得客户认可后，和客户团队合作进行代码重构，同时在重构的过程中建立了自动化性能测试度量工程、制定了高性能编码规范、以及搭建了面向性能的持续集成环境相关的工程基础设施。
+成果 按照新设计重构后的代码业务性能指标提升了1.5倍，超过了预期目标，同时内存占用下降了30%。同时，帮客户搭建的性能持续测试和看护工程交接给客户团队持续演进和维护。</description>
     </item>
     
     <item>
-      <title>国内银行：DevOps设计应用</title>
-      <link>https://joycode-art.github.io/story/03-devops/</link>
+      <title>某自动驾驶软件仿真自动化测试项目</title>
+      <link>https://joycode-art.github.io/story/04-auto-testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://joycode-art.github.io/story/03-devops/</guid>
-      <description>性能模型 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+      <guid>https://joycode-art.github.io/story/04-auto-testing/</guid>
+      <description>问题 某自动驾驶软件团队开发的自动驾驶软件需要经过仿真软件测试才能进入真车试验场以及上路测试。客户在自动驾驶仿真软件上述测试过程是全人工的，对于回归类测试效率低下，无法满足自动驾驶软件的高效迭代演进的需求。
+咨询过程 顾问入场后，根据客户场景，设计基于仿真软件的自动化测试方案。根据仿真软件提供的各种API，将其编程自动化；同时设计开发一套自动驾驶的测试断言系统，用于组合描述各种路况和车辆状态以及时间序列断言。同时提供一套测试专用语言（DSL），供测试人员低成本的进行用例描述。最后实现一套测试调度框架，完成仿真初始化、场景加载，测试调度执行，断言，过程录制与回放以及测试结果的可视化展示。
+成果 与客户团队合作设计开发完成自动驾驶仿真测试框架，赋能客户测试团队开发了自动化回归测试用例上百条，部署在持续集成服务器自动回归测试，大大提高了客户自动驾驶软件的测试和演进效率。</description>
+    </item>
+    
+    <item>
+      <title>某路由器产品千万级代码规模代码的构建效率优化项目</title>
+      <link>https://joycode-art.github.io/story/03-efficiency-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/story/03-efficiency-optimization/</guid>
+      <description>问题 某传输设备制造商的路由器产品，代码千万级规模，整个产品的构建系统非常复杂，难以做到构建过程的全量源码溯源；此外构建效率十分低下，内部开发团队及个人级别的代码提交触发的日常构建对应的服务器开销十分巨大。
+咨询过程 分析客户的构建系统，复杂度主要是一套代码构建需要支持产品类型上百款，内部又区分用户态SO，内核态KO以及资源模型构建，下层使用的交叉工具链以及硬件芯片体系架构多元。基于分析结果，重新设计开发了一套构建框架，其中使用包管理技术标准化了构建过程中的依赖管理，使用容器技术做到构建环境即代码，同时重构了部分客户业务代码以及资源脚本代码，最终帮助客户解决了构建溯源和构建效率上的问题；
+成果 新的构建系统借助包管理和容器技术，做到了构建可重复可溯源。另外在过程中和客户进行了必要的软件代码的组件化改造，做到了软件按照组件独立构建，达到了构建时间和资源占用成倍下降。</description>
     </item>
     
   </channel>

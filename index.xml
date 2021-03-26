@@ -140,7 +140,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://joycode-art.github.io/team/03-weigangqiang/</guid>
-      <description></description>
+      <description>概况介绍 全栈软件工程师，精通C/C++、Java、Scala、NodeJS，Ruby和Python等各种 前后端技术和语言，并对不同语言背后的构建差异、依赖管理设计等技术有深入研究。曾先后在嵌入式平台系统、无线通信系统、大数据、人工智能对话平台、SAAS服务等领域中从事核心系统架构设计，建模、性能优化与工程自动化提效工作。在工作中长期领导和赋能开发团队构筑自动化构建与测试、持续集成与部署、性能优化等各方面的能力。曾受邀作为讲师在“2019年Clickhouse北京峰会”， “2019年Ruby conf中国开发者大会”， “2020年全球C++及系统软件技术大会”，“2020年华为ICT软件技术大会”进行分享。          开源作品 mongoid_collection_separated：支持mongo表自定义拆分工具   介绍：针对ruby语言使用Mongo中超大规模数据库表的场景，实现动态配置与修改分表策略的库，支撑业务无感知使用原有接口访问拆分表。</description>
     </item>
     
     <item>

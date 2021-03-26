@@ -207,6 +207,10 @@
   </url>
   
   <url>
+    <loc>https://joycode-art.github.io/solution/04-efficiency/</loc>
+  </url>
+  
+  <url>
     <loc>https://joycode-art.github.io/solution/05-ai/</loc>
   </url>
   
@@ -231,11 +235,7 @@
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/solution/03-efficiency/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joycode-art.github.io/solution/02-system-perf/</loc>
+    <loc>https://joycode-art.github.io/solution/03-system-perf/</loc>
   </url>
   
   <url>
@@ -247,7 +247,7 @@
   </url>
   
   <url>
-    <loc>https://joycode-art.github.io/solution/04-soft-arch/</loc>
+    <loc>https://joycode-art.github.io/solution/02-soft-arch/</loc>
   </url>
   
 </urlset>

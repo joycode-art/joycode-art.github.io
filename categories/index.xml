@@ -6,28 +6,19 @@
     <description>Recent content in Categories on JoyCode: A Hardcore Software Consultancy | JoyCode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>Designed By [JoyCode](https://joycode.art/)</copyright>
+    <copyright>Copyright @ [卓酷软件技术（西安）有限责任公司](https://joycode.art/) All Rights Reserved     备案号：陕ICP备2020017028号</copyright>
     <lastBuildDate>Sat, 14 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="https://joycode-art.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>智能与数据工程</title>
-      <link>https://joycode-art.github.io/categories/%E6%99%BA%E8%83%BD%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%B7%A5%E7%A8%8B/</link>
+      <title>开发者测试</title>
+      <link>https://joycode-art.github.io/categories/%E5%BC%80%E5%8F%91%E8%80%85%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://joycode-art.github.io/categories/%E6%99%BA%E8%83%BD%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%B7%A5%E7%A8%8B/</guid>
+      <guid>https://joycode-art.github.io/categories/%E5%BC%80%E5%8F%91%E8%80%85%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>硬核技术</title>
-      <link>https://joycode-art.github.io/categories/%E7%A1%AC%E6%A0%B8%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
-      
-      <guid>https://joycode-art.github.io/categories/%E7%A1%AC%E6%A0%B8%E6%8A%80%E6%9C%AF/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>系统工程效率 </title>
+      <title>系统工程效率</title>
       <link>https://joycode-art.github.io/categories/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E6%95%88%E7%8E%87/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
@@ -45,11 +36,20 @@
     </item>
     
     <item>
-      <title>软件架构优化</title>
-      <link>https://joycode-art.github.io/categories/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%BC%98%E5%8C%96/</link>
+      <title>软件设计</title>
+      <link>https://joycode-art.github.io/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://joycode-art.github.io/categories/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%BC%98%E5%8C%96/</guid>
+      <guid>https://joycode-art.github.io/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>重构</title>
+      <link>https://joycode-art.github.io/categories/%E9%87%8D%E6%9E%84/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://joycode-art.github.io/categories/%E9%87%8D%E6%9E%84/</guid>
       <description></description>
     </item>
     

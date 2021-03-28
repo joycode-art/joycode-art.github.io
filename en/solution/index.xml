@@ -6,7 +6,7 @@
     <description>Recent content in 解决方案 on JoyCode: A Hardcore Software Consultancy | JoyCode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Designed By [JoyCode Inc.](https://joycode-art.github.io)</copyright><atom:link href="https://joycode-art.github.io/en/solution/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright @ [卓酷软件技术（西安）有限责任公司](https://joycode.art/) All Rights Reserved，   备案号：陕ICP备2020017028号</copyright><atom:link href="https://joycode-art.github.io/en/solution/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>智能与数据工程</title>
       <link>https://joycode-art.github.io/en/solution/05-ai/</link>
@@ -35,21 +35,21 @@
     </item>
     
     <item>
-      <title>系统性能工程</title>
-      <link>https://joycode-art.github.io/en/solution/02-system-perf/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://joycode-art.github.io/en/solution/02-system-perf/</guid>
-      <description>性能模型 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
-    </item>
-    
-    <item>
       <title>软件架构优化</title>
       <link>https://joycode-art.github.io/en/solution/04-soft-arch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://joycode-art.github.io/en/solution/04-soft-arch/</guid>
       <description>架构风格 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
+    </item>
+    
+    <item>
+      <title>高性能软件工程</title>
+      <link>https://joycode-art.github.io/en/solution/02-system-perf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joycode-art.github.io/en/solution/02-system-perf/</guid>
+      <description>性能模型 在计算机工程中，计算机体系结构是描述计算机系统功能，组织和实现的一组规则和方法。它主要包括指令集、内存管理、I/O 和总线结构。</description>
     </item>
     
   </channel>

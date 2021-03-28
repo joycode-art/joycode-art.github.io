@@ -6,60 +6,58 @@
     <description>Recent content in 技术洞见 on JoyCode: A Hardcore Software Consultancy | JoyCode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>Designed By [JoyCode](https://joycode.art/)</copyright>
+    <copyright>Copyright @ [卓酷软件技术（西安）有限责任公司](https://joycode.art/) All Rights Reserved     备案号：陕ICP备2020017028号</copyright>
     <lastBuildDate>Sat, 14 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="https://joycode-art.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Clean C&#43;&#43;: 应用「准关键字」定义抽象接口</title>
-      <link>https://joycode-art.github.io/blog/post-2/</link>
+      <title>可测试性设计</title>
+      <link>https://joycode-art.github.io/blog/01-test-design/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://joycode-art.github.io/blog/post-2/</guid>
-      <description>There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies.</description>
+      <guid>https://joycode-art.github.io/blog/01-test-design/</guid>
+      <description>架构是完美的，实现是骨干的 在切入这个主题之前，先看一个“完美架构图”的问题。我相信你肯定看过无数多个类似这样的架构图，每个框框都排布整齐，而且显得特别高大上。
+但是，实际的系统实现真的是这样吗？未必。系统往往充满了各种变化、约束、限制和条件，这些隐式的概念往往是不能“公诸于世”的。设计存在就是为了控制住系统实现的复杂度，应对软件的变化，并将这些隐式的概念显式化。
+但是，我们也不能否认架构存在的意义，至少它利于个体之间的交流，利于与客户的沟通，并在更高维度的角度看待问题，并指导进一步的系统设计和实现。
+分层架构 理论上，任何复杂的系统都可以用一个main函数实现，但事实上没人那么干，分层架构便是一种最朴素的系统分解和组合的架构思维，并符合大部分人的心智模型。
+分层架构最大的好处在于提供了层间抽象和隔离的机制，并非常容易在工程上保证层间的契约不被破坏。例如，分层架构遵守单向依赖原则，当有人违背架构原则而引入循环依赖，采用一些架构看护的工具，使能自动检查这些行为的。
+其次，分层架构有利于开展模块间并行开发和协作。每个模块只要边界清晰，便可以独立开发了。但是，任何的软件工程方法的实践，必然存在它的边际效应。
+同层模块间依赖混乱、模块内实现一团乱麻， 这是很多系统实现的真实写照。虽然，层间调用和约定都得到了很好的约束和保证，但同层内的模块间的耦合程度极高，相互引用和依赖，缺失架构原则的约束和检查。</description>
     </item>
     
     <item>
-      <title>实现模式</title>
-      <link>https://joycode-art.github.io/blog/post-5/</link>
+      <title>实现正交设计</title>
+      <link>https://joycode-art.github.io/blog/02-impl-design/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://joycode-art.github.io/blog/post-5/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</description>
+      <guid>https://joycode-art.github.io/blog/02-impl-design/</guid>
+      <description>软件设计的目标 软件设计就是为了完成如下目标，其可验证性、重要程度依次减低。
+ 实现功能 易于重用 易于理解 没有冗余  实现功能 实现功能的目标压倒一起，这也是软件设计的首要标准。如何判定系统功能的完备性呢？通过所有测试用例。</description>
     </item>
     
     <item>
-      <title>开发者测试</title>
-      <link>https://joycode-art.github.io/blog/post-6/</link>
+      <title>系统性能优化</title>
+      <link>https://joycode-art.github.io/blog/04-performance/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://joycode-art.github.io/blog/post-6/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</description>
+      <guid>https://joycode-art.github.io/blog/04-performance/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>开发者测试: 实现BDD测试框架(JSpec)</title>
-      <link>https://joycode-art.github.io/blog/post-1/</link>
+      <title>系统构建综述</title>
+      <link>https://joycode-art.github.io/blog/05-building/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://joycode-art.github.io/blog/post-1/</guid>
-      <description>There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies.</description>
+      <guid>https://joycode-art.github.io/blog/05-building/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>性能优化</title>
-      <link>https://joycode-art.github.io/blog/post-4/</link>
+      <title>重构技术全览</title>
+      <link>https://joycode-art.github.io/blog/03-refactoring/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://joycode-art.github.io/blog/post-4/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</description>
-    </item>
-    
-    <item>
-      <title>重构</title>
-      <link>https://joycode-art.github.io/blog/post-3/</link>
-      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
-      
-      <guid>https://joycode-art.github.io/blog/post-3/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</description>
+      <guid>https://joycode-art.github.io/blog/03-refactoring/</guid>
+      <description></description>
     </item>
     
   </channel>

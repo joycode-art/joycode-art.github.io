@@ -99,6 +99,18 @@
           
           
           <li class="nav-item">
+            <a class="nav-link" href="https://joycode-art.github.io/conference">Conferences</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://joycode-art.github.io/conference">技术大会</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
             <a class="nav-link" href="https://joycode-art.github.io/training">Training</a>
           </li>
           
@@ -117,53 +129,11 @@
           
           
           
-          <li class="nav-link">            
-            
-            <select class="border-0" id="select-language" onchange="location = this.value;">
-              
-              
-              
-              
-              
-              
-              
-              
-              <option id="en" value="https://joycode-art.github.io/en/blog/" selected>English
-              </option>
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              <option id="zh" value="https://joycode-art.github.io/blog/">简体中文</option>
-              
-              
-              
-              
-            </select>
-            
-          </li>
+          
         </ul>
 
         
-        <div class="navbar-button">
-          <button href="#!" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#signup-modal">Sign
-            Up</button>
-          <button href="#!" class="btn btn-sm btn-link pr-xl-0" data-toggle="modal" data-target="#signin-modal">Log
-            in<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-            </svg></button>
-        </div>
+        
       </div>
 
       
@@ -171,86 +141,6 @@
   </div>
 </header>
 <!-- /navigation -->
-
-
-
-<div class="modal fade rounded" id="signup-modal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title font-weight-bold">Sign up now</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body p-3 p-sm-4">
-        <form method="POST" class="needs-validation row" novalidate>
-          <div class="form-group mb-20 col-md-6">
-            <label class="text-black-200 h6 font-weight-600 mb-2" for="fname">First Name*</label>
-            <input class="form-control shadow-none" type="text" placeholder="Jack" id="fname" required>
-            <p class="font-weight-bold invalid-feedback">Your first name is required!</p>
-          </div>
-          <div class="form-group mb-20 col-md-6">
-            <label class="text-black-200 h6 font-weight-600 mb-2" for="lname">Last Name*</label>
-            <input class="form-control shadow-none" type="text" placeholder="Barker" id="lname" required>
-            <p class="font-weight-bold invalid-feedback">Your last name is required!</p>
-          </div>
-          <div class="form-group mb-20 col-12">
-            <label class="text-black-200 h6 font-weight-600 mb-2" for="email2">Email Address*</label>
-            <input class="form-control shadow-none" type="email" placeholder="jack@email.com" id="email2" required>
-            <p class="font-weight-bold invalid-feedback">Your email is required!</p>
-          </div>
-          <div class="form-group mb-20 col-12">
-            <label class="text-black-200 h6 font-weight-600 mb-2" for="password">Password*</label>
-            <input class="form-control shadow-none" type="password" id="password" required>
-            <p class="font-weight-bold invalid-feedback">Your password is required!</p>
-          </div>
-          <div class="form-group mb-20 col-12">
-            <label class="text-black-200 h6 font-weight-600 mb-2" for="repassword">Retype Password*</label>
-            <input class="form-control shadow-none" type="password" id="repassword" required>
-            <p class="font-weight-bold invalid-feedback">Please retype your password.</p>
-          </div>
-          <div class="form-group col-12">
-            <button class="btn btn-primary w-100" type="submit">Sign Up</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="modal fade rounded" id="signin-modal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto" style="max-width:400px">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title font-weight-bold">Welcome to JoyCode</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body p-3 p-sm-4">
-        <form method="POST" class="needs-validation row" novalidate>
-          <div class="form-group mb-20 col-12">
-            <label class="text-black-200 h6 font-weight-600 mb-2" for="email">Email Address*</label>
-            <input class="form-control shadow-none" type="email" id="email" required>
-            <p class="font-weight-bold invalid-feedback">Your email is required!</p>
-          </div>
-          <div class="form-group mb-20 col-12">
-            <label class="text-black-200 h6 font-weight-600 mb-2" for="passwordSignIn">Password*</label>
-            <input class="form-control shadow-none" type="password" id="passwordSignIn" required>
-            <p class="font-weight-bold invalid-feedback">Your password is required!</p>
-          </div>
-          <div class="form-group col-12">
-            <button class="btn btn-primary w-100" type="submit">Sign In</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
 	
 <section class="page-header bg-light-gray has-shapes has-bg-brash bg-brash-bottom"
   style="background-image:url('https://joycode-art.github.io/images/brushes/banner.svg')">
@@ -307,7 +197,7 @@
             <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/en/blog/post-1/">Programming DSL: Implements JSpec</a>
             <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>4 Mins Read
             </div>
-            <p>There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies.</p>
+            <p></p>
           </div>
         </div>
         
@@ -324,7 +214,7 @@
             <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/en/blog/post-2/">Your ‘Surge Capacity’ Is Depleted It’s Why You Feel Awful to The Society</a>
             <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>2 Mins Read
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</p>
+            <p></p>
           </div>
         </div>
         
@@ -341,7 +231,7 @@
             <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/en/blog/post-3/">Your ‘Surge Capacity’ Is Depleted It’s Why You Feel Awful to The Society</a>
             <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>2 Mins Read
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</p>
+            <p></p>
           </div>
         </div>
         
@@ -358,7 +248,7 @@
             <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/en/blog/post-4/">Your ‘Surge Capacity’ Is Depleted It’s Why You Feel Awful to The Society</a>
             <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>2 Mins Read
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</p>
+            <p></p>
           </div>
         </div>
         
@@ -375,7 +265,7 @@
             <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/en/blog/post-5/">Your ‘Surge Capacity’ Is Depleted It’s Why You Feel Awful to The Society</a>
             <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>2 Mins Read
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</p>
+            <p></p>
           </div>
         </div>
         
@@ -392,7 +282,7 @@
             <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/en/blog/post-6/">Your ‘Surge Capacity’ Is Depleted It’s Why You Feel Awful to The Society</a>
             <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>2 Mins Read
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla.</p>
+            <p></p>
           </div>
         </div>
         
@@ -410,16 +300,53 @@
 
 <footer class="bg-light-gray has-shapes has-bg-brash bg-brash-top "
   style="background-image: url('https://joycode-art.github.io/images/brushes/footer.svg')">
+  <div class="container">
+    <div class="row pt-50 pb-50 justify-content-center">
+      <div class="col-lg-5 col-md-6">
+        <div class="pr-0 pr-lg-4 pl-md-3 mt-5 mt-md-0">
+          <a class="mb-25" href="https://joycode-art.github.io">
+            
+            <img class="img-fluid" src="https://joycode-art.github.io/images/logo.png" alt="JoyCode: A Hardcore Software Consultancy | JoyCode">
+            
+          </a>
+          <p>通过技术卓越，勇于创新，快速实践，为客户创造非凡价值。这是每个JoyCoder的通用代码，共同构成了JoyCode的价值观。</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md col-sm-6">
+        <div class="pl-0 pl-md-3 mt-5 mt-md-0">
+          <h5 class="font-weight-600 mb-20">Social Links</h5>
+          <ul class="list-unstyled footer-links">
+            
+            <li>电子邮件: <a href="marketing@joycode.art">marketing@joycode.art</a></li>
+            
+            <li>Github: <a href="https://github.com/ccup">https://github.com/ccup</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md col-sm-6">
+        <div class="pl-0 pl-md-3">
+          <h5 class="font-weight-600 mb-20">Contact</h5>
+          
+          <img class="img-fluid rounded-lg" src="https://joycode-art.github.io/images/official-account.jpg" alt="JoyCode: A Hardcore Software Consultancy | JoyCode">
+          
+        </div>
+      </div>      
+    </div>
+  </div>
   <div class="footer-bottom">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="block border-top text-center content">Designed By <a href="https://joycode-art.github.io">JoyCode Inc.</a></a>
+          <div class="block border-top text-center content">Copyright @ <a href="https://joycode.art/">卓酷软件技术（西安）有限责任公司</a> All Rights Reserved，   备案号：陕ICP备2020017028号</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="shape-1 shape-xs bg-orange rounded-circle"></div>
   <div class="shape-2 shape-sm-2 bg-cyan rounded-circle"></div>
   <div class="shape-3 shape-sm bg-yellow rounded-circle"></div>

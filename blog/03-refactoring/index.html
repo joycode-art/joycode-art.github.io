@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <title>重构技术全览</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="this is meta description">
+  <meta name="author" content="JoyCode Inc.">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/bootstrap/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/themify-icons/themify-icons.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/slick/slick.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/slick/slick-theme.css">
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/plugins/aos/aos.css">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://joycode-art.github.io/scss/style.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://joycode-art.github.io/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="https://joycode-art.github.io/images/favicon.png" type="image/x-icon">
+
+  
+  <meta property="og:image" content="https://joycode-art.github.io/images/blogs/004.png" />
+  
+  <meta property="og:title" content="重构技术全览" />
+<meta property="og:description" content="this is meta description" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joycode-art.github.io/blog/03-refactoring/" />
+<meta property="article:published_time" content="2020-03-14T15:40:24+06:00" />
+<meta property="article:modified_time" content="2020-03-14T15:40:24+06:00" />
+
+  
+
+</head><body id="top" data-spy="scroll" data-target="#navbar-spy" class="position-relative">
+<!-- preloader start -->
+<div class="preloader position-fixed d-flex align-items-center justify-content-center">
+  <div class="block">
+    <div class="loader-image mb-20">
+      <img src="images/preloader.png" alt="">
+    </div>
+    <h2 class="loader-text text-uppercase">
+      <span class="h3 font-weight-light mb-1">Welcome to</span>
+      <span class="font-weight-bold">JoyCode</span>
+    </h2>
+  </div> 
+</div>
+<!-- preloader end -->
+<header class="header-nav position-relative">
+    <div class="container">
+      <nav class="navbar navbar-expand-xl navbar-light px-0">
+        <a class="navbar-brand p-0" href="https://joycode-art.github.io">
+          
+          <img class="img-fluid" src="https://joycode-art.github.io/images/logo.png" alt="JoyCode: A Hardcore Software Consultancy | JoyCode">
+          
+        </a>
+
+        <button class="navbar-toggler bg-white rounded-0 p-0" type="button" data-toggle="collapse"
+          data-target="#navlinks" aria-controls="navlinks" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="nav-toggle-icon" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+            <path class="line top"
+              d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+            <path class="line middle" d="m 70,50 h -40" />
+            <path class="line bottom"
+              d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" /></svg>
+        </button>
+        
+
+        <div class="collapse navbar-collapse" id="navlinks">
+          <ul class="navbar-nav mx-auto">
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/">主页</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/solution">解决方案</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/story">咨询案例</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/training">企业培训</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/blog">技术洞见</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://joycode-art.github.io/team">关于我们</a>
+            </li>
+            
+            
+            
+          </ul>
+        </div>
+        
+      </nav>
+    </div>
+  </header>
+
+  
+  <section class="section-padding pt-50">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-lg-9 col-md-12 mb-60" data-aos="fade-in" data-aos-delay="50">
+          <div class="post-category position-relative mb-15"><a
+            href="/categories/%e9%87%8d%e6%9e%84" class="text-black-200 font-weight-600 ml-1">重构 </a>
+            
+          </div>
+
+          <h2 class="font-weight-bold mb-30">重构技术全览</h2>
+
+          <div class="post-meta font-weight-600 text-primary mb-15">
+            <a target="_blank" class="text-primary" href="https://joycode.art/team/01-wangbo">王博</a>
+            <span class="mx-2">|</span>
+            <span>14 Mar, 2020</span>
+            <span class="mx-2">|</span>
+            <span>0 Mins Read</span>
+          </div>
+          <div class="content"></div>
+        </div>
+          
+        
+      </div>
+    </div>
+  </section>
+  
+
+  
+  <section class="pb-50">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-6 col-md-9 text-center mb-40">
+          <h2 class="section-title">Recent Articles</h2>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="col-lg-4 col-md-6 mb-40">
+          <div class="card border-0 h-100">
+            <a class="d-flex flex-fill align-items-center" href="https://joycode-art.github.io/blog/01-test-design/"><img class="card-img-top rounded" src="https://joycode-art.github.io/images/blogs/012.png" alt="blog-image"></a>
+            <div class="p-25 pb-0">
+              <div class="post-category position-relative mb-15"><a
+                href="/categories/%e5%bc%80%e5%8f%91%e8%80%85%e6%b5%8b%e8%af%95" class="text-black-200 font-weight-600 ml-1">开发者测试 </a>
+                
+              </div>
+              <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/blog/01-test-design/">可测试性设计</a>
+              <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>1 Mins Read
+              </div>
+              <p>架构是完美的，实现是骨干的 在切入这个主题之前，先看一个“完美架构图”的问题。我相信你肯定看过无数多个类似这样的架构图，每个框框都排布整齐，而且显得特别高大上。
+但是，实际的系统实现真的是这样吗？未必。系统往往充满了各种变化、约束、限制和条件，这些隐式的概念往往是不能“公诸于世”的。设计存在就是为了控制住系统实现的复杂度，应对软件的变化，并将这些隐式的概念显式化。
+但是，我们也不能否认架构存在的意义，至少它利于个体之间的交流，利于与客户的沟通，并在更高维度的角度看待问题，并指导进一步的系统设计和实现。
+分层架构 理论上，任何复杂的系统都可以用一个main函数实现，但事实上没人那么干，分层架构便是一种最朴素的系统分解和组合的架构思维，并符合大部分人的心智模型。
+分层架构最大的好处在于提供了层间抽象和隔离的机制，并非常容易在工程上保证层间的契约不被破坏。例如，分层架构遵守单向依赖原则，当有人违背架构原则而引入循环依赖，采用一些架构看护的工具，使能自动检查这些行为的。
+其次，分层架构有利于开展模块间并行开发和协作。每个模块只要边界清晰，便可以独立开发了。但是，任何的软件工程方法的实践，必然存在它的边际效应。
+同层模块间依赖混乱、模块内实现一团乱麻， 这是很多系统实现的真实写照。虽然，层间调用和约定都得到了很好的约束和保证，但同层内的模块间的耦合程度极高，相互引用和依赖，缺失架构原则的约束和检查。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-40">
+          <div class="card border-0 h-100">
+            <a class="d-flex flex-fill align-items-center" href="https://joycode-art.github.io/blog/02-impl-design/"><img class="card-img-top rounded" src="https://joycode-art.github.io/images/blogs/007.png" alt="blog-image"></a>
+            <div class="p-25 pb-0">
+              <div class="post-category position-relative mb-15"><a
+                href="/categories/%e8%bd%af%e4%bb%b6%e8%ae%be%e8%ae%a1" class="text-black-200 font-weight-600 ml-1">软件设计 </a>
+                
+              </div>
+              <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/blog/02-impl-design/">实现正交设计</a>
+              <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>5 Mins Read
+              </div>
+              <p>软件设计的目标 软件设计就是为了完成如下目标，其可验证性、重要程度依次减低。
+ 实现功能 易于重用 易于理解 没有冗余  实现功能 实现功能的目标压倒一起，这也是软件设计的首要标准。如何判定系统功能的完备性呢？通过所有测试用例。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-40">
+          <div class="card border-0 h-100">
+            <a class="d-flex flex-fill align-items-center" href="https://joycode-art.github.io/blog/04-performance/"><img class="card-img-top rounded" src="https://joycode-art.github.io/images/blogs/005.png" alt="blog-image"></a>
+            <div class="p-25 pb-0">
+              <div class="post-category position-relative mb-15"><a
+                href="/categories/%e7%b3%bb%e7%bb%9f%e6%80%a7%e8%83%bd%e5%b7%a5%e7%a8%8b" class="text-black-200 font-weight-600 ml-1">系统性能工程 </a>
+                
+              </div>
+              <a class="h4 font-weight-bold d-block mb-15" href="https://joycode-art.github.io/blog/04-performance/">系统性能优化</a>
+              <div class="post-meta font-weight-600 mb-15">14 Mar, 2020<span class="mx-2">|</span>0 Mins Read
+              </div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+
+
+<footer class="bg-light-gray has-shapes has-bg-brash bg-brash-top "
+  style="background-image: url('https://joycode-art.github.io/images/brushes/footer.svg')">
+  <div class="container">
+    <div class="row pt-50 pb-50 justify-content-center">
+      <div class="col-lg-5 col-md-6">
+        <div class="pr-0 pr-lg-4 pl-md-3 mt-5 mt-md-0">
+          <a class="mb-25" href="https://joycode-art.github.io">
+            
+            <img class="img-fluid" src="https://joycode-art.github.io/images/logo.png" alt="JoyCode: A Hardcore Software Consultancy | JoyCode">
+            
+          </a>
+          <p>通过技术卓越，勇于创新，快速实践，为客户创造非凡价值。这是每个JoyCoder的通用代码，共同构成了JoyCode的价值观。</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md col-sm-6">
+        <div class="pl-0 pl-md-3 mt-5 mt-md-0">
+          <h5 class="font-weight-600 mb-20">联系我们</h5>
+          <ul class="list-unstyled footer-links">
+            
+            <li>电子邮件: <a href="marketing@joycode.art">marketing@joycode.art</a></li>
+            
+            <li>Github: <a href="https://github.com/ccup">https://github.com/ccup</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md col-sm-6">
+        <div class="pl-0 pl-md-3">
+          <h5 class="font-weight-600 mb-20">关注我们</h5>
+          
+          <img class="img-fluid rounded-lg" src="https://joycode-art.github.io/images/official-account.jpg" alt="JoyCode: A Hardcore Software Consultancy | JoyCode">
+          
+        </div>
+      </div>      
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="block border-top text-center content">Copyright @ <a href="https://joycode.art/">卓酷软件技术（西安）有限责任公司</a> All Rights Reserved     备案号：陕ICP备2020017028号</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="shape-1 shape-xs bg-orange rounded-circle"></div>
+  <div class="shape-2 shape-sm-2 bg-cyan rounded-circle"></div>
+  <div class="shape-3 shape-sm bg-yellow rounded-circle"></div>
+  <div class="shape-4 shape-xs-2 bg-cyan rounded-circle"></div>
+  <div class="shape-5 shape-sm-2 bg-yellow rounded-circle"></div>
+  <div class="shape-6 shape-sm-2 bg-orange rounded-circle"></div>
+</footer>
+
+
+
+<a href="#top" class="btn btn-primary scroll-to-top-btn smooth-scroll position-fixed"><svg
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+    <path id="Layer" fill="currentColor"
+      d="M7.2 19.2L15.2 11.2C15.68 10.71 16.43 10.68 16.96 11.08L17.08 11.2L25.08 19.2L23.2 21.08L16.14 14.02L9.08 21.08L7.2 19.2Z" />
+    </svg></a>
+
+
+<!-- JS Plugins -->
+
+<script src="https://joycode-art.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/shuffle/shuffle.min.js"></script>
+
+<script src="https://joycode-art.github.io/plugins/aos/aos.js"></script>
+
+
+<!-- Main Script -->
+
+<script src="https://joycode-art.github.io/js/script.min.js"></script></body>
+
+</html>

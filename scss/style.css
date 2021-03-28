@@ -2651,97 +2651,88 @@ a.text-black-400:hover {
   .pricing-switch {
     text-align: center; } }
 
-.pricing-table td.active {
-  position: relative;
-  overflow: hidden; }
-  .pricing-table td.active .recomended {
-    position: absolute;
-    background: #dca71c;
-    color: #ffffff;
-    font-weight: 600;
-    padding: 0 25px;
-    transform: rotate(45deg);
-    right: -29px;
-    top: 26px;
-    font-size: 10px;
-    letter-spacing: 1px; }
-
-.pricing-table td,
-.pricing-table th {
-  border: 1px solid #EFEFEF;
-  padding: 20px;
-  width: 20%; }
-
-.pricing-table td span {
-  vertical-align: middle; }
-
-.pricing-table thead td,
-.pricing-table thead th {
-  border-bottom-width: 1px;
-  background: #FF3158;
-  border-color: #FF5F7D; }
-
-.pricing-table thead td:first-child,
-.pricing-table thead th:first-child {
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-top-left-radius: 25px; }
-
-.pricing-table thead td:last-child,
-.pricing-table thead th:last-child {
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-top-right-radius: 25px; }
-
-.pricing-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3; }
-
-.pricing-table td:nth-child(1) {
-  width: 25%; }
-
-.pricing-table td:nth-child(2) {
-  width: 80%; }
-
-@media (max-width: 991px) {
-  .pricing-table {
-    display: block; }
-    .pricing-table thead,
-    .pricing-table tbody,
-    .pricing-table th,
-    .pricing-table td,
-    .pricing-table tr {
+.pricing-table {
+  table-layout: fixed; }
+  .pricing-table td.active {
+    position: relative;
+    overflow: hidden; }
+    .pricing-table td.active .recomended {
+      position: absolute;
+      background: #dca71c;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 0 25px;
+      transform: rotate(45deg);
+      right: -29px;
+      top: 26px;
+      font-size: 10px;
+      letter-spacing: 1px; }
+  .pricing-table td,
+  .pricing-table th {
+    border: 1px solid #EFEFEF;
+    padding: 20px;
+    width: 20%; }
+  .pricing-table td span {
+    vertical-align: middle; }
+  .pricing-table thead td,
+  .pricing-table thead th {
+    border-bottom-width: 1px;
+    background: #FF3158;
+    border-color: #FF5F7D; }
+  .pricing-table thead td:first-child,
+  .pricing-table thead th:first-child {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-top-left-radius: 25px; }
+  .pricing-table thead td:last-child,
+  .pricing-table thead th:last-child {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-top-right-radius: 25px; }
+  .pricing-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3; }
+  .pricing-table td:nth-child(1) {
+    width: 25%; }
+  .pricing-table td:nth-child(2) {
+    width: 80%; }
+  @media (max-width: 991px) {
+    .pricing-table {
       display: block; }
-    .pricing-table thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px; }
-    .pricing-table tr {
-      border: 1px solid #ccc; }
-    .pricing-table td,
-    .pricing-table th {
-      padding: 10px 20px;
-      width: initial; }
+      .pricing-table thead,
+      .pricing-table tbody,
+      .pricing-table th,
+      .pricing-table td,
+      .pricing-table tr {
+        display: block; }
+      .pricing-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px; }
+      .pricing-table tr {
+        border: 1px solid #ccc; }
+      .pricing-table td,
+      .pricing-table th {
+        padding: 10px 20px;
+        width: initial; }
+      .pricing-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%; }
+      .pricing-table td:before {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        content: attr(data-label); } }
+  @media (max-width: 575px) {
     .pricing-table td {
-      border: none;
-      border-bottom: 1px solid #eee;
-      position: relative;
-      padding-left: 50%; }
+      padding-left: 40%; }
     .pricing-table td:before {
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      font-weight: bold;
-      content: attr(data-label); } }
-
-@media (max-width: 575px) {
-  .pricing-table td {
-    padding-left: 40%; }
-  .pricing-table td:before {
-    width: 39%; } }
-
+      width: 39%; } }
 .accordionFAQ .card-header {
   position: relative;
   padding-left: 40px;
